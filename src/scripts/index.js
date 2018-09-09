@@ -1,3 +1,5 @@
+import '@babel/polyfill';
+
 import { Main } from './class';
 
 import '../styles/main.scss';
