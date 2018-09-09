@@ -1,0 +1,90 @@
+#game {
+  .party-title {
+    background: $color-grey-lightest;
+    padding: $spacing / 4 $gutter-width / 3 * 2;
+    border: 1px solid $color-border;
+    border-top: 0;
+    font-weight: 600;
+
+    .human {
+      display: none;
+    }
+  }
+
+  #gameUsername {
+    text-overflow: ellipsis;
+    max-width: $spacing * 6;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom;
+  }
+
+  .preview {
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .image {
+      border: 1px solid $color-border;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: no-repeat 0% 50%;
+      background-size: 80%;
+
+      &.right {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  .game-human-control {
+    text-align: center;
+    display: none;
+
+    img {
+      cursor: pointer;
+      margin: $gutter-width $spacing;
+    }
+  }
+
+  .game-computer-control {
+    text-align: center;
+  }
+
+  &.pvc {
+    .party-title {
+      .human {
+        display: inline-block;
+      }
+
+      .computer {
+        display: none;
+      }
+    }
+
+    .game-human-control {
+      display: block;
+    }
+
+    .game-computer-control {
+      display: none;
+    }
+  }
+
+  &.animated {
+    .preview .image {
+      animation: MoveUpDown .4s linear infinite;
+    }
+
+    .game-human-control {
+      pointer-events: none;
+      opacity: .6;
+    }
+  }
+}

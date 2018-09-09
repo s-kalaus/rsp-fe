@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>RSP</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container">
+
+        <div class="steps onboarding py-3" id="onboarding">
+
+          <h1>Welcome!</h1>
+
+          <h2 id="onboardingName"></h2>
+
+          <div id="onboardingPromo"></div>
+
+          <p id="onboardingDescription"></p>
+
+          <form name="onboardingForm" method="post" id="onboardingForm">
+
+            <div class="form-group">
+              <label class="form-label" for="control-username">Enter Username</label>
+              <input class="form-control" type="text" required name="username" id="control-username">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Game Type</label>
+              <label class="form-control d-block"><input type="radio" name="gameType" value="pvc" checked> You vs Computer</label>
+              <label class="form-control d-block"><input type="radio" name="gameType" value="cvc"> Computer vs Computer</label>
+            </div>
+
+            <div class="form-group">
+
+              <button class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="steps game py-3 d-none" id="game">
+
+          <h1>Round #<span id="gameRound"></span></h1>
+
+          <div class="row">
+
+            <div class="col-6 mb-3">
+
+              <div class="preview">
+
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+
+                <div class="image" id="gameParty0"></div>
+              </div>
+
+              <div class="party-title">
+
+                <span class="human" id="gameUsername"></span><span class="computer">Computer</span>:
+
+                <span id="gamePartyScore0"></span>
+              </div>
+            </div>
+
+            <div class="col-6 mb-3">
+
+              <div class="preview">
+
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+
+                <div class="image right" id="gameParty1"></div>
+              </div>
+
+              <div class="party-title">
+
+                Computer:
+
+                <span id="gamePartyScore1"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-human-control">
+
+            <div id="gameHumanControl" class="mb-3"></div>
+
+            <button class="btn btn-primary" id="gameHumanControlStop">Leave Game</button>
+          </div>
+
+          <div class="game-computer-control">
+
+            <h2 class="mt-4 mb-6">Next Round in: <span id="gameComputerControl"></span></h2>
+
+            <button class="btn btn-primary" id="gameComputerControlStop">Join Game</button>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

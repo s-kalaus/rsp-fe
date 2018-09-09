@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-size: $font-size-base;
+  background-color: $color-white;
+  font-family: 'Open Sans', sans-serif;
+  color: $color-text;
+}
+
+a {
+  color: $color-link;
+
+  &:active,
+  &:visited,
+  &:hover {
+    color: darken($color-link, 10%);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

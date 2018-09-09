@@ -1,0 +1,33 @@
+.container {
+  max-width: $container-width-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}
+
+@media (min-width: $screen-xs) {
+  .container {
+    max-width: $container-width-max-xs;
+  }
+}
+
+.row {
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+}
+
+[class*="col-"] {
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}
+
+@media (min-width: $screen-xs) {
+  .row {
+    display: flex;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+}

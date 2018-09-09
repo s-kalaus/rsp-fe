@@ -1,0 +1,10 @@
+#onboarding {
+  #onboardingPromo {
+    padding-top: $spacing / 2;
+
+    img {
+      max-width: $gutter-width * 3;
+      margin-right: $gutter-width;
+    }
+  }
+}

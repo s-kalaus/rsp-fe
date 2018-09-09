@@ -1,0 +1,18 @@
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: $spacing / 2;
+}
+
+h1 {
+  font-size: $font-size-headline;
+}
+
+h2 {
+  font-size: $font-size-headline * .8;
+}
+
+h3 {
+  font-size: $font-size-headline * .6;
+}
+

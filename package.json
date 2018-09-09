@@ -1,0 +1,50 @@
+{
+  "name": "rsp-fe",
+  "version": "1.0.0",
+  "description": "FE part of Rock Scissors Paper game",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "watch": "./node_modules/.bin/webpack --config webpack.config.dev.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/s-kalaus/rsp-fe.git"
+  },
+  "keywords": [
+    "game",
+    "rock",
+    "scossors",
+    "paper"
+  ],
+  "author": {
+    "name": "Sergey Kalaus",
+    "email": "sergey@kalaus.ru",
+    "url": "http://kalaus.ru"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-kalaus/rsp-fe/issues"
+  },
+  "homepage": "https://github.com/s-kalaus/rsp-fe#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^3.0.4",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
