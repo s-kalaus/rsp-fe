@@ -1306,7 +1306,7 @@
     "__docId__": 91,
     "kind": "file",
     "name": "scripts/class/main.js",
-    "content": "/* global ENV */\n\nimport { Request } from './request';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Dom } from './dom';\n\n/**\n * Main\n */\nexport class Main {\n\n  /**\n   * Constructor\n   */\n  constructor() {\n\n    this.gameName = Main.gameName;\n    this.config = ENV;\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.dom = new Dom();\n\n    this.steps = {\n      onboarding: new StepOnboarding(this),\n      game: new StepGame(this)\n    };\n\n    this.request = new Request(this);\n  }\n\n  /**\n   * Init Game Schema\n   */\n  initGameSchema() {\n\n    this.request.get('static/' + this.gameName).then((config) => {\n\n      this.config = Object.assign({}, this.config, config);\n\n      this.setStep(Main.stepOnboarding);\n\n      return null;\n    });\n  }\n\n  /**\n   * Set Step\n   *\n   * @param {String} stepName Name of step\n   */\n  setStep(stepName) {\n\n    this.step = this.steps[stepName];\n\n    Object.keys(this.steps).forEach((theStepName) => stepName === theStepName\n      ? this.steps[theStepName].activate()\n      : this.steps[theStepName].deactivate()\n    );\n  }\n\n  /**\n   * Send error\n   *\n   * @param {Object} err Error object\n   */\n  error(err) {\n\n    // eslint-disable-next-line no-console\n    console.error(err);\n  }\n}\n\nMain.stepOnboarding = 'onboarding';\nMain.stepGame = 'game';\nMain.gameTypePvc = 'pvc';\nMain.gameTypeCvc = 'cvc';\nMain.gameName = 'rsp';\n",
+    "content": "/* global ENV */\n\nimport { Request } from './request';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Dom } from './dom';\n\n/**\n * Main\n */\nexport class Main {\n\n  /**\n   * Constructor\n   */\n  constructor() {\n\n    this.gameName = Main.gameName;\n    this.config = ENV;\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.dom = new Dom();\n\n    this.steps = {\n      onboarding: new StepOnboarding(this),\n      game: new StepGame(this)\n    };\n\n    this.request = new Request(this);\n  }\n\n  /**\n   * Init Game Schema\n   */\n  initGameSchema() {\n\n    this.request.get('static/' + this.gameName).then((config) => {\n\n      this.config = Object.assign({}, this.config, config);\n\n      this.setStep(Main.stepOnboarding);\n\n      return null;\n    });\n  }\n\n  /**\n   * Set Step\n   *\n   * @param {String} stepName Name of step\n   */\n  setStep(stepName) {\n\n    this.step = this.steps[stepName];\n\n    Object.keys(this.steps).forEach((theStepName) => stepName === theStepName\n      ? this.steps[theStepName].activate()\n      : this.steps[theStepName].deactivate()\n    );\n  }\n\n  /**\n   * Send error\n   *\n   * @param {Object} err Error object\n   */\n  error(err) {\n\n    // eslint-disable-next-line no-console\n    console.error(err);\n\n    return err;\n  }\n}\n\nMain.stepOnboarding = 'onboarding';\nMain.stepGame = 'game';\nMain.gameTypePvc = 'pvc';\nMain.gameTypeCvc = 'cvc';\nMain.gameName = 'rsp';\n",
     "static": true,
     "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/main.js",
     "access": "public",
@@ -1523,7 +1523,11 @@
         "description": "Error object"
       }
     ],
-    "return": null
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
   },
   {
     "__docId__": 105,
@@ -1790,7 +1794,7 @@
     "__docId__": 115,
     "kind": "file",
     "name": "scripts/class/round.js",
-    "content": "import { Promise } from 'bluebird';\n\nexport class Round {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} game Game data\n   */\n  constructor(main, game) {\n\n    const roundPrev = game.rounds.length ? game.rounds[game.rounds.length - 1] : null;\n\n    this.main = main;\n    this.game = game;\n    this.num = roundPrev ? roundPrev.num + 1 : 1;\n    this.partyChoice0 = roundPrev ? roundPrev.partyChoice0 : 0;\n    this.partyChoice1 = roundPrev ? roundPrev.partyChoice1 : 0;\n  }\n\n  /**\n   * Finish round\n   *\n   * @param {Number} choice Choice index\n   */\n  finish(choice) {\n\n    this.game.animationStart();\n\n    Promise.all([\n      this.main.request\n        .post(\n          'game/' + this.game.gameId + '/round',\n          choice === undefined ? {} : {choice}\n        ),\n      new Promise(resolve =>\n        setTimeout(() => resolve(), this.main.config.roundAnimationDuration))\n    ]).then((result) => {\n\n      this.game.animationStop();\n\n      this.processResult(result[0]);\n\n      return null;\n    }).catch((err) => {\n\n      this.main.error(err);\n\n      this.game.animationStop();\n    });\n  }\n\n  /**\n   * Process Result\n   *\n   * @param {Object} roundData New round data\n   */\n  processResult(roundData) {\n\n    this.roundId = roundData.roundId;\n    this.partyChoice0 = roundData.partyChoice0;\n    this.partyChoice1 = roundData.partyChoice1;\n    this.winner = roundData.winner;\n\n    if (this.game.score[roundData.winner] !== undefined) {\n      this.game.score[roundData.winner]++;\n    }\n\n    this.game.createRound();\n  }\n}\n",
+    "content": "import { Promise } from 'bluebird';\n\nexport class Round {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} game Game data\n   */\n  constructor(main, game) {\n\n    const roundPrev = game.rounds.length ? game.rounds[game.rounds.length - 1] : null;\n\n    this.main = main;\n    this.game = game;\n    this.num = roundPrev ? roundPrev.num + 1 : 1;\n    this.partyChoice0 = roundPrev ? roundPrev.partyChoice0 : 0;\n    this.partyChoice1 = roundPrev ? roundPrev.partyChoice1 : 0;\n  }\n\n  /**\n   * Finish round\n   *\n   * @param {Number} choice Choice index\n   */\n  finish(choice) {\n\n    this.game.animationStart();\n\n    Promise.all([\n      this.main.request\n        .post(\n          'game/' + this.game.gameId + '/round',\n          choice === undefined ? {} : {choice}\n        ),\n      new Promise(resolve =>\n        setTimeout(() => resolve(), this.main.config.roundAnimationDuration))\n    ]).then((result) => {\n\n      this.game.animationStop();\n\n      this.processResult(result[0]);\n\n      return null;\n    }).catch((err) => {\n\n      this.main.error(err);\n\n      this.game.animationStop();\n\n      return null;\n    });\n  }\n\n  /**\n   * Process Result\n   *\n   * @param {Object} roundData New round data\n   */\n  processResult(roundData) {\n\n    this.roundId = roundData.roundId;\n    this.partyChoice0 = roundData.partyChoice0;\n    this.partyChoice1 = roundData.partyChoice1;\n    this.winner = roundData.winner;\n\n    if (this.game.score[roundData.winner] !== undefined) {\n      this.game.score[roundData.winner]++;\n    }\n\n    this.game.createRound();\n  }\n}\n",
     "static": true,
     "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/round.js",
     "access": "public",
@@ -1970,7 +1974,7 @@
     "longname": "scripts/class/round.js~Round#processResult",
     "access": "public",
     "description": "Process Result",
-    "lineNumber": 59,
+    "lineNumber": 61,
     "params": [
       {
         "nullable": null,
@@ -1994,7 +1998,7 @@
     "longname": "scripts/class/round.js~Round#roundId",
     "access": "public",
     "description": null,
-    "lineNumber": 61,
+    "lineNumber": 63,
     "undocument": true,
     "type": {
       "types": [
@@ -2011,7 +2015,7 @@
     "longname": "scripts/class/round.js~Round#winner",
     "access": "public",
     "description": null,
-    "lineNumber": 64,
+    "lineNumber": 66,
     "undocument": true,
     "type": {
       "types": [

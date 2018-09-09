@@ -48,6 +48,8 @@ export class Round {
       this.main.error(err);
 
       this.game.animationStop();
+
+      return null;
     });
   }
 
