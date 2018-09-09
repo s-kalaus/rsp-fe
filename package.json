@@ -1,8 +1,7 @@
 {
   "name": "rsp-fe",
   "version": "1.0.0",
-  "description": "FE part of Rock Scissors Paper game",
-  "main": "dist/index.js",
+  "description": "Frontend part of Rock Scissors Paper game",
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run",
     "coverage": "./node_modules/.bin/rimraf ./coverage && ./node_modules/.bin/karma start --code-coverage --single-run --reporters coverage-istanbul",
