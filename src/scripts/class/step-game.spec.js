@@ -1,4 +1,4 @@
-/* global expect, ENV, Function, spyOn */
+/* global expect, Function, spyOn */
 
 import { Promise } from 'bluebird';
 

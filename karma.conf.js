@@ -12,12 +12,12 @@ module.exports = config => {
     ],
     client: {
       clearContext: false
-    }/*,
-    coverageReporter: {
-      type: 'html',
+    },
+    coverageIstanbulReporter: {
       dir: 'coverage',
-      subdir: '.'
-    }*/,
+      reports: ['html', 'lcovonly'],
+      fixWebpackSourcePaths: true
+    },
     files: [
       './node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
       './src/**/*.spec.js'

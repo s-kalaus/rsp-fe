@@ -16,7 +16,7 @@ rules.push({
           }
         },
         enforce: 'post',
-        exclude: /.spec.js/,
+        exclude: /(round|onboarding|\/game|.spec).js$/,
         include: path.resolve('src/')
       }
     ]

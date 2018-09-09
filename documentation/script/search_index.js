@@ -546,6 +546,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "scripts/class/game.spec.js",
+    "file/scripts/class/game.spec.js.html",
+    "scripts/class/game.spec.js",
+    "file"
+  ],
+  [
     "scripts/class/index.js",
     "file/scripts/class/index.js.html",
     "scripts/class/index.js",
@@ -744,6 +750,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "scripts/class/round.spec.js",
+    "file/scripts/class/round.spec.js.html",
+    "scripts/class/round.spec.js",
+    "file"
+  ],
+  [
     "scripts/class/step-game.js",
     "file/scripts/class/step-game.js.html",
     "scripts/class/step-game.js",
@@ -862,6 +874,12 @@ window.esdocSearchIndex = [
     "class/scripts/class/step-onboarding.js~StepOnboarding.html#instance-method-onSubsmit",
     "scripts/class/step-onboarding.js~StepOnboarding#onSubsmit",
     "method"
+  ],
+  [
+    "scripts/class/step-onboarding.spec.js",
+    "file/scripts/class/step-onboarding.spec.js.html",
+    "scripts/class/step-onboarding.spec.js",
+    "file"
   ],
   [
     "scripts/class/step.js",

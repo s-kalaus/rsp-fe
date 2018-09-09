@@ -1283,6 +1283,17 @@
   {
     "__docId__": 89,
     "kind": "file",
+    "name": "scripts/class/game.spec.js",
+    "content": "/* global expect, Function, spyOn */\n\nimport { Game } from './game';\n\ndescribe('Game', () => {\n  let main;\n  let game;\n  let inst;\n\n  beforeEach(() => {\n    main = {dom: {$: () => ({})}};\n    game = {gameId: 1, gameType: 'pvc'};\n    inst = new Game(main, game);\n  });\n\n  it('should exist', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n  });\n\n  describe('Function: init', () => {\n    beforeEach(() => {\n      spyOn(inst, 'createComputerControl');\n      spyOn(inst, 'createHumanControl');\n      spyOn(inst, 'createRound');\n    });\n    it('should exist', function() {\n      expect(inst.init).toEqual(jasmine.any(Function));\n    });\n    it('should call createComputerControl', function() {\n      inst.init();\n      expect(inst.createComputerControl).toHaveBeenCalledWith();\n    });\n    it('should call createHumanControl', function() {\n      inst.init();\n      expect(inst.createHumanControl).toHaveBeenCalledWith();\n    });\n    it('should call createRound', function() {\n      inst.init();\n      expect(inst.createRound).toHaveBeenCalledWith();\n    });\n  });\n\n  // ...WIP\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/game.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
     "name": "scripts/class/index.js",
     "content": "export * from './main';\n",
     "static": true,
@@ -1292,7 +1303,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 90,
+    "__docId__": 91,
     "kind": "file",
     "name": "scripts/class/main.js",
     "content": "/* global ENV */\n\nimport { Request } from './request';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Dom } from './dom';\n\n/**\n * Main\n */\nexport class Main {\n\n  /**\n   * Constructor\n   */\n  constructor() {\n\n    this.gameName = Main.gameName;\n    this.config = ENV;\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.dom = new Dom();\n\n    this.steps = {\n      onboarding: new StepOnboarding(this),\n      game: new StepGame(this)\n    };\n\n    this.request = new Request(this);\n  }\n\n  /**\n   * Init Game Schema\n   */\n  initGameSchema() {\n\n    this.request.get('static/' + this.gameName).then((config) => {\n\n      this.config = Object.assign({}, this.config, config);\n\n      this.setStep(Main.stepOnboarding);\n    });\n  }\n\n  /**\n   * Set Step\n   *\n   * @param {String} stepName Name of step\n   */\n  setStep(stepName) {\n\n    this.step = this.steps[stepName];\n\n    Object.keys(this.steps).forEach((theStepName) => stepName === theStepName\n      ? this.steps[theStepName].activate()\n      : this.steps[theStepName].deactivate()\n    );\n  }\n\n  /**\n   * Send error\n   *\n   * @param {Object} err Error object\n   */\n  error(err) {\n\n    // eslint-disable-next-line no-console\n    console.error(err);\n  }\n}\n\nMain.stepOnboarding = 'onboarding';\nMain.stepGame = 'game';\nMain.gameTypePvc = 'pvc';\nMain.gameTypeCvc = 'cvc';\nMain.gameName = 'rsp';\n",
@@ -1303,7 +1314,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 91,
+    "__docId__": 92,
     "kind": "class",
     "name": "Main",
     "memberof": "scripts/class/main.js",
@@ -1318,7 +1329,7 @@
     "interface": false
   },
   {
-    "__docId__": 92,
+    "__docId__": 93,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "scripts/class/main.js~Main",
@@ -1331,7 +1342,7 @@
     "lineNumber": 16
   },
   {
-    "__docId__": 93,
+    "__docId__": 94,
     "kind": "member",
     "name": "gameName",
     "memberof": "scripts/class/main.js~Main",
@@ -1348,7 +1359,7 @@
     }
   },
   {
-    "__docId__": 94,
+    "__docId__": 95,
     "kind": "member",
     "name": "config",
     "memberof": "scripts/class/main.js~Main",
@@ -1365,7 +1376,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 96,
     "kind": "method",
     "name": "init",
     "memberof": "scripts/class/main.js~Main",
@@ -1380,7 +1391,7 @@
     "return": null
   },
   {
-    "__docId__": 96,
+    "__docId__": 97,
     "kind": "member",
     "name": "dom",
     "memberof": "scripts/class/main.js~Main",
@@ -1397,7 +1408,7 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 98,
     "kind": "member",
     "name": "steps",
     "memberof": "scripts/class/main.js~Main",
@@ -1414,7 +1425,7 @@
     }
   },
   {
-    "__docId__": 98,
+    "__docId__": 99,
     "kind": "member",
     "name": "request",
     "memberof": "scripts/class/main.js~Main",
@@ -1431,7 +1442,7 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 100,
     "kind": "method",
     "name": "initGameSchema",
     "memberof": "scripts/class/main.js~Main",
@@ -1446,7 +1457,7 @@
     "return": null
   },
   {
-    "__docId__": 101,
+    "__docId__": 102,
     "kind": "method",
     "name": "setStep",
     "memberof": "scripts/class/main.js~Main",
@@ -1472,7 +1483,7 @@
     "return": null
   },
   {
-    "__docId__": 102,
+    "__docId__": 103,
     "kind": "member",
     "name": "step",
     "memberof": "scripts/class/main.js~Main",
@@ -1489,7 +1500,7 @@
     }
   },
   {
-    "__docId__": 103,
+    "__docId__": 104,
     "kind": "method",
     "name": "error",
     "memberof": "scripts/class/main.js~Main",
@@ -1515,7 +1526,7 @@
     "return": null
   },
   {
-    "__docId__": 104,
+    "__docId__": 105,
     "kind": "file",
     "name": "scripts/class/main.spec.js",
     "content": "/* global expect, ENV, Function, spyOn */\n\nimport { Promise } from 'bluebird';\n\nimport { Dom } from './dom';\nimport { Main } from './main';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Request } from './request';\n\ndescribe('Main', () => {\n  let inst;\n\n  beforeEach(() => {\n    inst = new Main();\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.gameName).toBe('rsp');\n    expect(inst.config).toEqual(ENV);\n  });\n\n  describe('Function: init', () => {\n    it('should exist', function() {\n      expect(inst.init).toEqual(jasmine.any(Function));\n    });\n    it('should set dom', function() {\n      inst.init();\n      expect(inst.dom).toEqual(new Dom());\n    });\n    it('should set steps', function() {\n      inst.init();\n      expect(inst.steps).toEqual({\n        onboarding: new StepOnboarding(inst),\n        game: new StepGame(inst)\n      });\n    });\n    it('should set request', function() {\n      inst.init();\n      expect(inst.request).toEqual(new Request(inst));\n    });\n  });\n\n  describe('Function: initGameSchema', () => {\n    beforeEach(() => {\n      inst.init();\n      spyOn(inst, 'setStep');\n    });\n    it('should exist', function() {\n      expect(inst.initGameSchema).toEqual(jasmine.any(Function));\n    });\n    it('should call request.get', function() {\n      spyOn(inst.request, 'get').and.returnValue({then: () => ({})});\n      inst.initGameSchema();\n      expect(inst.request.get).toHaveBeenCalledWith('static/rsp');\n    });\n    it('should set config', function() {\n      spyOn(inst.request, 'get').and.returnValue({then: (callback) => callback({test: 1})});\n      inst.initGameSchema();\n      expect(inst.config).toEqual({apiUrl: 'api-url', test: 1});\n    });\n    it('should call setStep', function() {\n      spyOn(inst.request, 'get').and.returnValue({then: (callback) => callback({test: 1})});\n      inst.initGameSchema();\n      expect(inst.setStep).toHaveBeenCalledWith('onboarding');\n    });\n  });\n\n  describe('Function: setStep', () => {\n    beforeEach(() => {\n      inst.init();\n    });\n    it('should exist', function() {\n      expect(inst.setStep).toEqual(jasmine.any(Function));\n    });\n    it('should call init onboarding', function() {\n      spyOn(inst.steps.onboarding, 'activate');\n      spyOn(inst.steps.game, 'deactivate');\n      inst.setStep('onboarding');\n      expect(inst.steps.onboarding.activate).toHaveBeenCalledWith();\n      expect(inst.steps.game.deactivate).toHaveBeenCalledWith();\n    });\n  });\n\n  describe('Function: error', () => {\n    it('should exist', function() {\n      expect(inst.error).toEqual(jasmine.any(Function));\n    });\n    it('should log to console', function() {\n      spyOn(console, 'error');\n      const err = new Error('test');\n      inst.error(err);\n      expect(console.error).toHaveBeenCalledWith(err);\n    });\n  });\n});\n",
@@ -1526,7 +1537,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 105,
+    "__docId__": 106,
     "kind": "file",
     "name": "scripts/class/request.js",
     "content": "import { Promise } from 'bluebird';\n\nexport class Request {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    this.main = main;\n  }\n\n  /**\n   * GET request\n   *\n   * @param {Object} path URL path\n   */\n  get(path) {\n\n    return this.send('get', path);\n  }\n\n  /**\n   * POST request\n   *\n   * @param {Object} path URL path\n   * @param {Object} data Data to post\n   */\n  post(path, data) {\n\n    return this.send('post', path, data);\n  }\n\n  /**\n   * Handles XHR request response\n   *\n   * @param {Object} xhttp Request object\n   * @param {Function} resolve Resolve function\n   * @param {Function} reject Reject function\n   */\n  onReadyStateChange(xhttp, resolve, reject) {\n\n    if (xhttp.readyState !== 4) {\n      return;\n    }\n\n    if (xhttp.status !== 200) {\n      return reject(new Error('Response status incorrect'));\n    }\n\n    try {\n\n      const response = JSON.parse(xhttp.responseText);\n\n      if (!response || !response.success) {\n        return reject(new Error('Response is not successfull'));\n      }\n\n      resolve(response.data);\n    } catch (e) {\n\n      reject(new Error('Response parse error'));\n    }\n  }\n\n  /**\n   * Send request\n   *\n   * @param {String} method Method to use\n   * @param {Object} path URL path\n   * @param {Object} data Data to post\n   */\n  send(method, path, data = {}) {\n\n    return new Promise((resolve, reject) => {\n\n      let body;\n      const xhttp = new XMLHttpRequest();\n\n      xhttp.onreadystatechange = () =>\n        this.onReadyStateChange(xhttp, resolve, reject);\n\n      xhttp.open(method.toUpperCase(), this.main.config.apiUrl + '/' + path, true);\n\n      if (this.main.user) {\n        xhttp.setRequestHeader('Authorization', this.main.user.sessionId);\n      }\n\n      if (method === 'post') {\n\n        xhttp.setRequestHeader('Content-Type', 'application/json');\n\n        body = JSON.stringify(data);\n      }\n\n      xhttp.send(body);\n    });\n  }\n}\n",
@@ -1537,7 +1548,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 106,
+    "__docId__": 107,
     "kind": "class",
     "name": "Request",
     "memberof": "scripts/class/request.js",
@@ -1553,7 +1564,7 @@
     "interface": false
   },
   {
-    "__docId__": 107,
+    "__docId__": 108,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "scripts/class/request.js~Request",
@@ -1578,7 +1589,7 @@
     ]
   },
   {
-    "__docId__": 108,
+    "__docId__": 109,
     "kind": "member",
     "name": "main",
     "memberof": "scripts/class/request.js~Request",
@@ -1595,7 +1606,7 @@
     }
   },
   {
-    "__docId__": 109,
+    "__docId__": 110,
     "kind": "method",
     "name": "get",
     "memberof": "scripts/class/request.js~Request",
@@ -1625,7 +1636,7 @@
     }
   },
   {
-    "__docId__": 110,
+    "__docId__": 111,
     "kind": "method",
     "name": "post",
     "memberof": "scripts/class/request.js~Request",
@@ -1665,7 +1676,7 @@
     }
   },
   {
-    "__docId__": 111,
+    "__docId__": 112,
     "kind": "method",
     "name": "onReadyStateChange",
     "memberof": "scripts/class/request.js~Request",
@@ -1715,7 +1726,7 @@
     }
   },
   {
-    "__docId__": 112,
+    "__docId__": 113,
     "kind": "method",
     "name": "send",
     "memberof": "scripts/class/request.js~Request",
@@ -1765,7 +1776,7 @@
     }
   },
   {
-    "__docId__": 113,
+    "__docId__": 114,
     "kind": "file",
     "name": "scripts/class/request.spec.js",
     "content": "/* global expect, Function, spyOn */\n\nimport { Request } from './request';\n\ndescribe('Request', () => {\n  let main;\n  let inst;\n\n  beforeEach(() => {\n    main = {\n      config: {apiUrl: 'test'},\n      user: {sessionId: 'test'}\n    };\n    inst = new Request(main);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n  });\n\n  describe('Function: get', () => {\n    it('should exist', function() {\n      expect(inst.get).toEqual(jasmine.any(Function));\n    });\n    it('should call send', function() {\n      spyOn(inst, 'send');\n      inst.get('path');\n      expect(inst.send).toHaveBeenCalledWith('get', 'path');\n    });\n  });\n\n  describe('Function: post', () => {\n    it('should exist', function() {\n      expect(inst.post).toEqual(jasmine.any(Function));\n    });\n    it('should call send', function() {\n      spyOn(inst, 'send');\n      inst.post('path', {test: 1});\n      expect(inst.send).toHaveBeenCalledWith('post', 'path', {test: 1});\n    });\n  });\n\n  describe('Function: onReadyStateChange', () => {\n    let resolve;\n    let reject;\n    let xhttp;\n    beforeEach(() => {\n      xhttp = {readyState: 4, status: 200, responseText: '{\"success\":true,\"data\":{\"test\":1}}'};\n      resolve = jasmine.createSpy('resolve');\n      reject = jasmine.createSpy('reject');\n    });\n    it('should exist', function() {\n      expect(inst.onReadyStateChange).toEqual(jasmine.any(Function));\n    });\n    it('should not call resolve/reject if readyState !== 4', function() {\n      xhttp.readyState = 0;\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(resolve).not.toHaveBeenCalled();\n      expect(reject).not.toHaveBeenCalled();\n    });\n    it('should call reject if status !== 200', function() {\n      xhttp.status = 500;\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response status incorrect'));\n    });\n    it('should call reject if response can not be parsed', function() {\n      xhttp.responseText = '-';\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response parse error'));\n    });\n    it('should call reject if response is failed', function() {\n      xhttp.responseText = '{\"success\":false}';\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response is not successfull'));\n    });\n    it('should call reject if response is failed (empty)', function() {\n      xhttp.responseText = '0';\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response is not successfull'));\n    });\n    it('should call resolve if everything ok', function() {\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(resolve).toHaveBeenCalledWith({test: 1});\n    });\n  });\n\n  describe('Function: send', () => {\n    let xhttp;\n    beforeEach(() => {\n      XMLHttpRequest = class {constructor() { return xhttp = this; }};\n      XMLHttpRequest.prototype.open = jasmine.createSpy('open');\n      XMLHttpRequest.prototype.setRequestHeader = jasmine.createSpy('setRequestHeader');\n      XMLHttpRequest.prototype.send = jasmine.createSpy('send');\n      XMLHttpRequest.prototype.triggerOnReadyStateChange = function () { this.onreadystatechange(); };\n    });\n    it('should exist', function() {\n      expect(inst.send).toEqual(jasmine.any(Function));\n    });\n    it('should open request', function() {\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.open).toHaveBeenCalledWith('GET', 'test/path', true);\n    });\n    it('should set auth header', function() {\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.setRequestHeader).toHaveBeenCalledWith('Authorization', 'test');\n    });\n    it('should not set auth header', function() {\n      inst.main.user = null;\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.setRequestHeader).not.toHaveBeenCalled();\n    });\n    it('should send request', function() {\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith(undefined);\n    });\n    it('should send request (post)', function() {\n      inst.send('post', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith('{\"test\":1}');\n    });\n    it('should send request (post, no data)', function() {\n      inst.send('post', 'path');\n      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith('{}');\n    });\n    it('should call onReadyStateChange', function() {\n      spyOn(inst, 'onReadyStateChange');\n      inst.send('get', 'path', {test: 1});\n      xhttp.onreadystatechange();\n      expect(inst.onReadyStateChange).toHaveBeenCalledWith(xhttp, jasmine.any(Function), jasmine.any(Function));\n    });\n  });\n});\n",
@@ -1776,7 +1787,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 114,
+    "__docId__": 115,
     "kind": "file",
     "name": "scripts/class/round.js",
     "content": "import { Promise } from 'bluebird';\n\nexport class Round {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} game Game data\n   */\n  constructor(main, game) {\n\n    const roundPrev = game.rounds.length ? game.rounds[game.rounds.length - 1] : null;\n\n    this.main = main;\n    this.game = game;\n    this.num = roundPrev ? roundPrev.num + 1 : 1;\n    this.partyChoice0 = roundPrev ? roundPrev.partyChoice0 : 0;\n    this.partyChoice1 = roundPrev ? roundPrev.partyChoice1 : 0;\n  }\n\n  /**\n   * Finish round\n   *\n   * @param {Number} choice Choice index\n   */\n  finish(choice) {\n\n    this.game.animationStart();\n\n    Promise.all([\n      this.main.request\n        .post(\n          'game/' + this.game.gameId + '/round',\n          choice === undefined ? {} : {choice}\n        ),\n      new Promise(resolve =>\n        setTimeout(() => resolve(), this.main.config.roundAnimationDuration))\n    ]).then((result) => {\n\n      this.game.animationStop();\n\n      this.processResult(result[0]);\n    }).catch((err) => {\n\n      this.main.error(err);\n\n      this.game.animationStop();\n    });\n  }\n\n  /**\n   * Process Result\n   *\n   * @param {Object} roundData New round data\n   */\n  processResult(roundData) {\n\n    this.roundId = roundData.roundId;\n    this.partyChoice0 = roundData.partyChoice0;\n    this.partyChoice1 = roundData.partyChoice1;\n    this.winner = roundData.winner;\n\n    if (this.game.score[roundData.winner] !== undefined) {\n      this.game.score[roundData.winner]++;\n    }\n\n    this.game.createRound();\n  }\n}\n",
@@ -1787,7 +1798,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 115,
+    "__docId__": 116,
     "kind": "class",
     "name": "Round",
     "memberof": "scripts/class/round.js",
@@ -1803,7 +1814,7 @@
     "interface": false
   },
   {
-    "__docId__": 116,
+    "__docId__": 117,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "scripts/class/round.js~Round",
@@ -1838,7 +1849,7 @@
     ]
   },
   {
-    "__docId__": 117,
+    "__docId__": 118,
     "kind": "member",
     "name": "main",
     "memberof": "scripts/class/round.js~Round",
@@ -1855,7 +1866,7 @@
     }
   },
   {
-    "__docId__": 118,
+    "__docId__": 119,
     "kind": "member",
     "name": "game",
     "memberof": "scripts/class/round.js~Round",
@@ -1872,7 +1883,7 @@
     }
   },
   {
-    "__docId__": 119,
+    "__docId__": 120,
     "kind": "member",
     "name": "num",
     "memberof": "scripts/class/round.js~Round",
@@ -1889,7 +1900,7 @@
     }
   },
   {
-    "__docId__": 120,
+    "__docId__": 121,
     "kind": "member",
     "name": "partyChoice0",
     "memberof": "scripts/class/round.js~Round",
@@ -1906,7 +1917,7 @@
     }
   },
   {
-    "__docId__": 121,
+    "__docId__": 122,
     "kind": "member",
     "name": "partyChoice1",
     "memberof": "scripts/class/round.js~Round",
@@ -1923,7 +1934,7 @@
     }
   },
   {
-    "__docId__": 122,
+    "__docId__": 123,
     "kind": "method",
     "name": "finish",
     "memberof": "scripts/class/round.js~Round",
@@ -1949,7 +1960,7 @@
     "return": null
   },
   {
-    "__docId__": 123,
+    "__docId__": 124,
     "kind": "method",
     "name": "processResult",
     "memberof": "scripts/class/round.js~Round",
@@ -1975,7 +1986,7 @@
     "return": null
   },
   {
-    "__docId__": 124,
+    "__docId__": 125,
     "kind": "member",
     "name": "roundId",
     "memberof": "scripts/class/round.js~Round",
@@ -1992,7 +2003,7 @@
     }
   },
   {
-    "__docId__": 127,
+    "__docId__": 128,
     "kind": "member",
     "name": "winner",
     "memberof": "scripts/class/round.js~Round",
@@ -2009,7 +2020,18 @@
     }
   },
   {
-    "__docId__": 128,
+    "__docId__": 129,
+    "kind": "file",
+    "name": "scripts/class/round.spec.js",
+    "content": "/* global expect, Function, spyOn */\n\nimport { Round } from './round';\n\ndescribe('Round', () => {\n  let main;\n  let game;\n  let inst;\n\n  beforeEach(() => {\n    main = {};\n    game = {rounds: []};\n    inst = new Round(main, game);\n  });\n\n  it('should exist', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n  });\n\n  // ...WIP\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/round.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 130,
     "kind": "file",
     "name": "scripts/class/step-game.js",
     "content": "import { Step } from './step';\nimport { Game } from './game';\n\nexport class StepGame extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.round = 1;\n\n    this.iElement = this.main.dom.$('game');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.main.request.post('game', {\n      gameName: this.main.gameName,\n      gameType: this.main.gameType\n    }).then((gameData) => {\n\n      this.game = new Game(this.main, gameData);\n\n      this.game.init();\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
@@ -2020,7 +2042,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 129,
+    "__docId__": 131,
     "kind": "class",
     "name": "StepGame",
     "memberof": "scripts/class/step-game.js",
@@ -2039,7 +2061,7 @@
     ]
   },
   {
-    "__docId__": 130,
+    "__docId__": 132,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "scripts/class/step-game.js~StepGame",
@@ -2064,7 +2086,7 @@
     ]
   },
   {
-    "__docId__": 131,
+    "__docId__": 133,
     "kind": "member",
     "name": "round",
     "memberof": "scripts/class/step-game.js~StepGame",
@@ -2081,7 +2103,7 @@
     }
   },
   {
-    "__docId__": 132,
+    "__docId__": 134,
     "kind": "member",
     "name": "iElement",
     "memberof": "scripts/class/step-game.js~StepGame",
@@ -2098,7 +2120,7 @@
     }
   },
   {
-    "__docId__": 133,
+    "__docId__": 135,
     "kind": "method",
     "name": "init",
     "memberof": "scripts/class/step-game.js~StepGame",
@@ -2113,7 +2135,7 @@
     "return": null
   },
   {
-    "__docId__": 134,
+    "__docId__": 136,
     "kind": "member",
     "name": "game",
     "memberof": "scripts/class/step-game.js~StepGame",
@@ -2130,10 +2152,10 @@
     }
   },
   {
-    "__docId__": 135,
+    "__docId__": 137,
     "kind": "file",
     "name": "scripts/class/step-game.spec.js",
-    "content": "/* global expect, ENV, Function, spyOn */\n\nimport { Promise } from 'bluebird';\n\nimport { Game } from './game';\nimport { StepGame } from './step-game';\n\ndescribe('StepGame', () => {\n  let main;\n  let inst;\n  let resolve;\n  let reject;\n\n  beforeEach(() => {\n    main = {\n      config: {objects: [{image: ''}]},\n      user: {username: 'test'},\n      dom: {css: () => {}, $: () => ({classList: {add: () => {}, remove: () => {}}, addEventListener: () => {}, appendChild: () => {}}), create: () => ({addEventListener: () => {}}), html: () => {}},\n      request: {post: jasmine.createSpy('post').and.returnValue({then: (_resolve) => { resolve = _resolve; return { catch: (_reject) => reject = _reject }; }})},\n      gameName: 2,\n      gameType: 3,\n      error: jasmine.createSpy('error')\n    };\n    inst = new StepGame(main);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n    expect(inst.round).toBe(1);\n    expect(inst.iElement).toEqual(jasmine.any(Object));\n  });\n\n  describe('Function: init', () => {\n    it('should exist', function() {\n      expect(inst.init).toEqual(jasmine.any(Function));\n    });\n    it('should set game', function() {\n      inst.init();\n      resolve({test: 1});\n      expect(inst.game).toEqual(jasmine.any(Object));\n    });\n    it('should react on error', function() {\n      const err = new Error('test');\n      inst.init();\n      reject(err);\n      expect(inst.main.error).toHaveBeenCalledWith(err);\n    });\n  });\n});\n",
+    "content": "/* global expect, Function, spyOn */\n\nimport { Promise } from 'bluebird';\n\nimport { Game } from './game';\nimport { StepGame } from './step-game';\n\ndescribe('StepGame', () => {\n  let main;\n  let inst;\n  let resolve;\n  let reject;\n\n  beforeEach(() => {\n    main = {\n      config: {objects: [{image: ''}]},\n      user: {username: 'test'},\n      dom: {css: () => {}, $: () => ({classList: {add: () => {}, remove: () => {}}, addEventListener: () => {}, appendChild: () => {}}), create: () => ({addEventListener: () => {}}), html: () => {}},\n      request: {post: jasmine.createSpy('post').and.returnValue({then: (_resolve) => { resolve = _resolve; return { catch: (_reject) => reject = _reject }; }})},\n      gameName: 2,\n      gameType: 3,\n      error: jasmine.createSpy('error')\n    };\n    inst = new StepGame(main);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n    expect(inst.round).toBe(1);\n    expect(inst.iElement).toEqual(jasmine.any(Object));\n  });\n\n  describe('Function: init', () => {\n    it('should exist', function() {\n      expect(inst.init).toEqual(jasmine.any(Function));\n    });\n    it('should set game', function() {\n      inst.init();\n      resolve({test: 1});\n      expect(inst.game).toEqual(jasmine.any(Object));\n    });\n    it('should react on error', function() {\n      const err = new Error('test');\n      inst.init();\n      reject(err);\n      expect(inst.main.error).toHaveBeenCalledWith(err);\n    });\n  });\n});\n",
     "static": true,
     "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step-game.spec.js",
     "access": "public",
@@ -2141,7 +2163,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 136,
+    "__docId__": 138,
     "kind": "file",
     "name": "scripts/class/step-onboarding.js",
     "content": "import { Main } from './main';\nimport { Step } from './step';\nimport { User } from './user';\n\nexport class StepOnboarding extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.name = 'onboarding';\n    this.iElement = this.main.dom.$('onboarding');\n    this.iForm = this.main.dom.$('onboardingForm');\n    this.iPromo = this.main.dom.$('onboardingPromo');\n    this.iName = this.main.dom.$('onboardingName');\n    this.iDescription = this.main.dom.$('onboardingDescription');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.initInfo();\n    this.initPromo();\n    this.initForm();\n  }\n\n  /**\n   * Init info block\n   */\n  initInfo() {\n\n    this.main.dom.html(this.iName, this.main.config.name);\n    this.main.dom.html(this.iDescription, this.main.config.description);\n  }\n\n  /**\n   * Init promo block\n   */\n  initPromo() {\n\n    this.main.dom.html(this.iPromo, '');\n\n    this.main.config.objects.forEach((object) => {\n\n      const img = this.main.dom.create('img');\n\n      img.src = 'images/' + object.icon;\n\n      this.iPromo.appendChild(img);\n    });\n  }\n\n  /**\n   * Init form\n   */\n  initForm() {\n\n    this.iForm.addEventListener('submit', (event) => {\n\n      event.preventDefault();\n\n      this.onSubsmit();\n    }, true);\n  }\n\n  /**\n   * Submit handler\n   */\n  onSubsmit() {\n\n    this.main.gameType = this.iForm.gameType.value;\n\n    this.main.request.post('user', {\n      username: this.iForm.username.value\n    }).then((userData) => {\n\n      this.main.user = new User(this.main, userData);\n\n      this.main.setStep(Main.stepGame);\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
@@ -2152,7 +2174,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 137,
+    "__docId__": 139,
     "kind": "class",
     "name": "StepOnboarding",
     "memberof": "scripts/class/step-onboarding.js",
@@ -2171,7 +2193,7 @@
     ]
   },
   {
-    "__docId__": 138,
+    "__docId__": 140,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2196,7 +2218,7 @@
     ]
   },
   {
-    "__docId__": 139,
+    "__docId__": 141,
     "kind": "member",
     "name": "name",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2213,7 +2235,7 @@
     }
   },
   {
-    "__docId__": 140,
+    "__docId__": 142,
     "kind": "member",
     "name": "iElement",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2230,7 +2252,7 @@
     }
   },
   {
-    "__docId__": 141,
+    "__docId__": 143,
     "kind": "member",
     "name": "iForm",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2247,7 +2269,7 @@
     }
   },
   {
-    "__docId__": 142,
+    "__docId__": 144,
     "kind": "member",
     "name": "iPromo",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2264,7 +2286,7 @@
     }
   },
   {
-    "__docId__": 143,
+    "__docId__": 145,
     "kind": "member",
     "name": "iName",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2281,7 +2303,7 @@
     }
   },
   {
-    "__docId__": 144,
+    "__docId__": 146,
     "kind": "member",
     "name": "iDescription",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2298,7 +2320,7 @@
     }
   },
   {
-    "__docId__": 145,
+    "__docId__": 147,
     "kind": "method",
     "name": "init",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2313,7 +2335,7 @@
     "return": null
   },
   {
-    "__docId__": 146,
+    "__docId__": 148,
     "kind": "method",
     "name": "initInfo",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2328,7 +2350,7 @@
     "return": null
   },
   {
-    "__docId__": 147,
+    "__docId__": 149,
     "kind": "method",
     "name": "initPromo",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2343,7 +2365,7 @@
     "return": null
   },
   {
-    "__docId__": 148,
+    "__docId__": 150,
     "kind": "method",
     "name": "initForm",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2358,7 +2380,7 @@
     "return": null
   },
   {
-    "__docId__": 149,
+    "__docId__": 151,
     "kind": "method",
     "name": "onSubsmit",
     "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
@@ -2373,7 +2395,18 @@
     "return": null
   },
   {
-    "__docId__": 150,
+    "__docId__": 152,
+    "kind": "file",
+    "name": "scripts/class/step-onboarding.spec.js",
+    "content": "/* global expect, Function, spyOn */\n\nimport { StepOnboarding } from './step-onboarding';\n\ndescribe('StepOnboarding', () => {\n  let main;\n  let inst;\n\n  beforeEach(() => {\n    main = {dom: {$: () => ({})}};\n    inst = new StepOnboarding(main);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n  });\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step-onboarding.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 153,
     "kind": "file",
     "name": "scripts/class/step.js",
     "content": "export class Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    this.main = main;\n  }\n\n  /**\n   * Activate step\n   */\n  activate() {\n\n    this.iElement.classList.remove('d-none');\n\n    this.init();\n  }\n\n  /**\n   * Deactivate step\n   */\n  deactivate() {\n\n    this.iElement.classList.add('d-none');\n  }\n}\n",
@@ -2384,7 +2417,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 151,
+    "__docId__": 154,
     "kind": "class",
     "name": "Step",
     "memberof": "scripts/class/step.js",
@@ -2400,7 +2433,7 @@
     "interface": false
   },
   {
-    "__docId__": 152,
+    "__docId__": 155,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "scripts/class/step.js~Step",
@@ -2425,7 +2458,7 @@
     ]
   },
   {
-    "__docId__": 153,
+    "__docId__": 156,
     "kind": "member",
     "name": "main",
     "memberof": "scripts/class/step.js~Step",
@@ -2442,7 +2475,7 @@
     }
   },
   {
-    "__docId__": 154,
+    "__docId__": 157,
     "kind": "method",
     "name": "activate",
     "memberof": "scripts/class/step.js~Step",
@@ -2457,7 +2490,7 @@
     "return": null
   },
   {
-    "__docId__": 155,
+    "__docId__": 158,
     "kind": "method",
     "name": "deactivate",
     "memberof": "scripts/class/step.js~Step",
@@ -2472,7 +2505,7 @@
     "return": null
   },
   {
-    "__docId__": 156,
+    "__docId__": 159,
     "kind": "file",
     "name": "scripts/class/step.spec.js",
     "content": "/* global expect, Function, spyOn */\n\nimport { Step } from './step';\n\ndescribe('Step', () => {\n  let main;\n  let inst;\n\n  beforeEach(() => {\n    main = {test: 1};\n    inst = new Step(main);\n  });\n\n  it('should exist', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n  });\n\n  describe('Function: activate', () => {\n    it('should exist', function() {\n      expect(inst.activate).toEqual(jasmine.any(Function));\n    });\n    it('should call iElement.classList.remove', function() {\n      inst.init = jasmine.createSpy('init');\n      inst.iElement = {classList: {remove: jasmine.createSpy('remove')}};\n      inst.activate();\n      expect(inst.iElement.classList.remove).toHaveBeenCalledWith('d-none');\n      expect(inst.init).toHaveBeenCalledWith();\n    });\n  });\n\n  describe('Function: deactivate', () => {\n    it('should exist', function() {\n      expect(inst.deactivate).toEqual(jasmine.any(Function));\n    });\n    it('should call iElement.classList.add', function() {\n      inst.iElement = {classList: {add: jasmine.createSpy('add')}};\n      inst.deactivate();\n      expect(inst.iElement.classList.add).toHaveBeenCalledWith('d-none');\n    });\n  });\n});\n",
@@ -2483,7 +2516,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 157,
+    "__docId__": 160,
     "kind": "file",
     "name": "scripts/class/user.js",
     "content": "export class User {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} data User data\n   */\n  constructor(main, data) {\n\n    this.main = main;\n    this.sessionId = data.sessionId;\n    this.username = data.username;\n    this.gameType = data.gameType;\n  }\n}\n",
@@ -2494,7 +2527,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 158,
+    "__docId__": 161,
     "kind": "class",
     "name": "User",
     "memberof": "scripts/class/user.js",
@@ -2510,7 +2543,7 @@
     "interface": false
   },
   {
-    "__docId__": 159,
+    "__docId__": 162,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "scripts/class/user.js~User",
@@ -2545,7 +2578,7 @@
     ]
   },
   {
-    "__docId__": 160,
+    "__docId__": 163,
     "kind": "member",
     "name": "main",
     "memberof": "scripts/class/user.js~User",
@@ -2562,7 +2595,7 @@
     }
   },
   {
-    "__docId__": 161,
+    "__docId__": 164,
     "kind": "member",
     "name": "sessionId",
     "memberof": "scripts/class/user.js~User",
@@ -2579,7 +2612,7 @@
     }
   },
   {
-    "__docId__": 162,
+    "__docId__": 165,
     "kind": "member",
     "name": "username",
     "memberof": "scripts/class/user.js~User",
@@ -2596,7 +2629,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 166,
     "kind": "member",
     "name": "gameType",
     "memberof": "scripts/class/user.js~User",
@@ -2613,7 +2646,7 @@
     }
   },
   {
-    "__docId__": 164,
+    "__docId__": 167,
     "kind": "file",
     "name": "scripts/class/user.spec.js",
     "content": "/* global expect, Function, spyOn */\n\nimport { User } from './user';\n\ndescribe('User', () => {\n  let main;\n  let data;\n  let inst;\n\n  beforeEach(() => {\n    main = {test: 1};\n    data = {sessionId: 1, username: 2, gameType: 3};\n    inst = new User(main, data);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n    expect(inst.sessionId).toBe(1);\n    expect(inst.username).toBe(2);\n    expect(inst.gameType).toBe(3);\n  });\n});\n",
@@ -2624,7 +2657,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 165,
+    "__docId__": 168,
     "kind": "file",
     "name": "scripts/index.js",
     "content": "import { Main } from './class';\n\nimport '../styles/main.scss';\n\nconst rsp = new Main();\n\nwindow.addEventListener('load', () => {\n\n  rsp.init();\n\n  rsp.initGameSchema();\n}, true);\n\n",
@@ -2635,7 +2668,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 166,
+    "__docId__": 169,
     "kind": "variable",
     "name": "rsp",
     "memberof": "scripts/index.js",
@@ -2657,7 +2690,7 @@
   },
   {
     "kind": "index",
-    "content": "# rsp-fe\n\nFrontend part of Rock, Scissors, Paper game.\n\n[![travis ci](https://travis-ci.org/s-kalaus/rsp-fe.svg?branch=master)](https://travis-ci.org/s-kalaus/rsp-fe)\n\n[Coverage Report](https://s-kalaus.github.io/rsp-fe/coverage/lcov-report/index.html)\n\n[Documentation](https://s-kalaus.github.io/rsp-fe/documentation/index.html)\n\n[Demo](https://s-kalaus.github.io/rsp-fe/dist/index.html)\n\n## Development\n* `npm run build` - build production version (to `/dist`)\n* `npm start` - run in development mode (watcher)\n* `npm run lint` - run linter\n* `npm test` - run mocha unit tests\n* `npm run coverage` - run mocha unit tests & generate coverage report to `/coverage` folder\n* `npm run doc` - generate documentation to `/documentation` folder\n",
+    "content": "# rsp-fe\n\nFrontend part of Rock, Scissors, Paper game.\n\n[![travis ci](https://travis-ci.org/s-kalaus/rsp-fe.svg?branch=master)](https://travis-ci.org/s-kalaus/rsp-fe)\n\n[Coverage Report](https://s-kalaus.github.io/rsp-fe/coverage/index.html)\n\n[Documentation](https://s-kalaus.github.io/rsp-fe/documentation/index.html)\n\n[Demo](https://s-kalaus.github.io/rsp-fe/dist/index.html)\n\n## Development\n* `npm run build` - build production version (to `/dist`)\n* `npm start` - run in development mode (watcher)\n* `npm run lint` - run linter\n* `npm test` - run mocha unit tests\n* `npm run coverage` - run mocha unit tests & generate coverage report to `/coverage` folder\n* `npm run doc` - generate documentation to `/documentation` folder\n",
     "longname": "/home/dev/Dropbox/www/rsp-fe/README.md",
     "name": "./README.md",
     "static": true,

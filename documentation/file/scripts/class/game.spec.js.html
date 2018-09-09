@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | rsp-fe</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">scripts/class/game.spec.js | rsp-fe</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -42,20 +42,53 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="rsp-fe">rsp-fe</h1><p>Frontend part of Rock, Scissors, Paper game.</p>
-<p><a href="https://travis-ci.org/s-kalaus/rsp-fe"><img src="https://travis-ci.org/s-kalaus/rsp-fe.svg?branch=master" alt="travis ci"></a></p>
-<p><a href="https://s-kalaus.github.io/rsp-fe/coverage/index.html">Coverage Report</a></p>
-<p><a href="https://s-kalaus.github.io/rsp-fe/documentation/index.html">Documentation</a></p>
-<p><a href="https://s-kalaus.github.io/rsp-fe/dist/index.html">Demo</a></p>
-<h2 id="development">Development</h2><ul>
-<li><code>npm run build</code> - build production version (to <code>/dist</code>)</li>
-<li><code>npm start</code> - run in development mode (watcher)</li>
-<li><code>npm run lint</code> - run linter</li>
-<li><code>npm test</code> - run mocha unit tests</li>
-<li><code>npm run coverage</code> - run mocha unit tests &amp; generate coverage report to <code>/coverage</code> folder</li>
-<li><code>npm run doc</code> - generate documentation to <code>/documentation</code> folder</li>
-</ul>
-</div>
+<div class="content" data-ice="content"><h1 data-ice="title">scripts/class/game.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* global expect, Function, spyOn */
+
+import { Game } from &apos;./game&apos;;
+
+describe(&apos;Game&apos;, () =&gt; {
+  let main;
+  let game;
+  let inst;
+
+  beforeEach(() =&gt; {
+    main = {dom: {$: () =&gt; ({})}};
+    game = {gameId: 1, gameType: &apos;pvc&apos;};
+    inst = new Game(main, game);
+  });
+
+  it(&apos;should exist&apos;, function() {
+    expect(inst).toEqual(jasmine.any(Object));
+  });
+
+  describe(&apos;Function: init&apos;, () =&gt; {
+    beforeEach(() =&gt; {
+      spyOn(inst, &apos;createComputerControl&apos;);
+      spyOn(inst, &apos;createHumanControl&apos;);
+      spyOn(inst, &apos;createRound&apos;);
+    });
+    it(&apos;should exist&apos;, function() {
+      expect(inst.init).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should call createComputerControl&apos;, function() {
+      inst.init();
+      expect(inst.createComputerControl).toHaveBeenCalledWith();
+    });
+    it(&apos;should call createHumanControl&apos;, function() {
+      inst.init();
+      expect(inst.createHumanControl).toHaveBeenCalledWith();
+    });
+    it(&apos;should call createRound&apos;, function() {
+      inst.init();
+      expect(inst.createRound).toHaveBeenCalledWith();
+    });
+  });
+
+  // ...WIP
+});
+</code></pre>
+
 </div>
 
 <footer class="footer">
