@@ -30,6 +30,8 @@ export class StepGame extends Step {
       this.game = new Game(this.main, gameData);
 
       this.game.init();
+
+      return null;
     }).catch((err) => this.main.error(err));
   }
 }

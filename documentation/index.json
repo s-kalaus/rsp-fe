@@ -1306,7 +1306,7 @@
     "__docId__": 91,
     "kind": "file",
     "name": "scripts/class/main.js",
-    "content": "/* global ENV */\n\nimport { Request } from './request';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Dom } from './dom';\n\n/**\n * Main\n */\nexport class Main {\n\n  /**\n   * Constructor\n   */\n  constructor() {\n\n    this.gameName = Main.gameName;\n    this.config = ENV;\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.dom = new Dom();\n\n    this.steps = {\n      onboarding: new StepOnboarding(this),\n      game: new StepGame(this)\n    };\n\n    this.request = new Request(this);\n  }\n\n  /**\n   * Init Game Schema\n   */\n  initGameSchema() {\n\n    this.request.get('static/' + this.gameName).then((config) => {\n\n      this.config = Object.assign({}, this.config, config);\n\n      this.setStep(Main.stepOnboarding);\n    });\n  }\n\n  /**\n   * Set Step\n   *\n   * @param {String} stepName Name of step\n   */\n  setStep(stepName) {\n\n    this.step = this.steps[stepName];\n\n    Object.keys(this.steps).forEach((theStepName) => stepName === theStepName\n      ? this.steps[theStepName].activate()\n      : this.steps[theStepName].deactivate()\n    );\n  }\n\n  /**\n   * Send error\n   *\n   * @param {Object} err Error object\n   */\n  error(err) {\n\n    // eslint-disable-next-line no-console\n    console.error(err);\n  }\n}\n\nMain.stepOnboarding = 'onboarding';\nMain.stepGame = 'game';\nMain.gameTypePvc = 'pvc';\nMain.gameTypeCvc = 'cvc';\nMain.gameName = 'rsp';\n",
+    "content": "/* global ENV */\n\nimport { Request } from './request';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Dom } from './dom';\n\n/**\n * Main\n */\nexport class Main {\n\n  /**\n   * Constructor\n   */\n  constructor() {\n\n    this.gameName = Main.gameName;\n    this.config = ENV;\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.dom = new Dom();\n\n    this.steps = {\n      onboarding: new StepOnboarding(this),\n      game: new StepGame(this)\n    };\n\n    this.request = new Request(this);\n  }\n\n  /**\n   * Init Game Schema\n   */\n  initGameSchema() {\n\n    this.request.get('static/' + this.gameName).then((config) => {\n\n      this.config = Object.assign({}, this.config, config);\n\n      this.setStep(Main.stepOnboarding);\n\n      return null;\n    });\n  }\n\n  /**\n   * Set Step\n   *\n   * @param {String} stepName Name of step\n   */\n  setStep(stepName) {\n\n    this.step = this.steps[stepName];\n\n    Object.keys(this.steps).forEach((theStepName) => stepName === theStepName\n      ? this.steps[theStepName].activate()\n      : this.steps[theStepName].deactivate()\n    );\n  }\n\n  /**\n   * Send error\n   *\n   * @param {Object} err Error object\n   */\n  error(err) {\n\n    // eslint-disable-next-line no-console\n    console.error(err);\n  }\n}\n\nMain.stepOnboarding = 'onboarding';\nMain.stepGame = 'game';\nMain.gameTypePvc = 'pvc';\nMain.gameTypeCvc = 'cvc';\nMain.gameName = 'rsp';\n",
     "static": true,
     "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/main.js",
     "access": "public",
@@ -1467,7 +1467,7 @@
     "longname": "scripts/class/main.js~Main#setStep",
     "access": "public",
     "description": "Set Step",
-    "lineNumber": 55,
+    "lineNumber": 57,
     "params": [
       {
         "nullable": null,
@@ -1491,7 +1491,7 @@
     "longname": "scripts/class/main.js~Main#step",
     "access": "public",
     "description": null,
-    "lineNumber": 57,
+    "lineNumber": 59,
     "undocument": true,
     "type": {
       "types": [
@@ -1510,7 +1510,7 @@
     "longname": "scripts/class/main.js~Main#error",
     "access": "public",
     "description": "Send error",
-    "lineNumber": 70,
+    "lineNumber": 72,
     "params": [
       {
         "nullable": null,
@@ -1790,7 +1790,7 @@
     "__docId__": 115,
     "kind": "file",
     "name": "scripts/class/round.js",
-    "content": "import { Promise } from 'bluebird';\n\nexport class Round {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} game Game data\n   */\n  constructor(main, game) {\n\n    const roundPrev = game.rounds.length ? game.rounds[game.rounds.length - 1] : null;\n\n    this.main = main;\n    this.game = game;\n    this.num = roundPrev ? roundPrev.num + 1 : 1;\n    this.partyChoice0 = roundPrev ? roundPrev.partyChoice0 : 0;\n    this.partyChoice1 = roundPrev ? roundPrev.partyChoice1 : 0;\n  }\n\n  /**\n   * Finish round\n   *\n   * @param {Number} choice Choice index\n   */\n  finish(choice) {\n\n    this.game.animationStart();\n\n    Promise.all([\n      this.main.request\n        .post(\n          'game/' + this.game.gameId + '/round',\n          choice === undefined ? {} : {choice}\n        ),\n      new Promise(resolve =>\n        setTimeout(() => resolve(), this.main.config.roundAnimationDuration))\n    ]).then((result) => {\n\n      this.game.animationStop();\n\n      this.processResult(result[0]);\n    }).catch((err) => {\n\n      this.main.error(err);\n\n      this.game.animationStop();\n    });\n  }\n\n  /**\n   * Process Result\n   *\n   * @param {Object} roundData New round data\n   */\n  processResult(roundData) {\n\n    this.roundId = roundData.roundId;\n    this.partyChoice0 = roundData.partyChoice0;\n    this.partyChoice1 = roundData.partyChoice1;\n    this.winner = roundData.winner;\n\n    if (this.game.score[roundData.winner] !== undefined) {\n      this.game.score[roundData.winner]++;\n    }\n\n    this.game.createRound();\n  }\n}\n",
+    "content": "import { Promise } from 'bluebird';\n\nexport class Round {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} game Game data\n   */\n  constructor(main, game) {\n\n    const roundPrev = game.rounds.length ? game.rounds[game.rounds.length - 1] : null;\n\n    this.main = main;\n    this.game = game;\n    this.num = roundPrev ? roundPrev.num + 1 : 1;\n    this.partyChoice0 = roundPrev ? roundPrev.partyChoice0 : 0;\n    this.partyChoice1 = roundPrev ? roundPrev.partyChoice1 : 0;\n  }\n\n  /**\n   * Finish round\n   *\n   * @param {Number} choice Choice index\n   */\n  finish(choice) {\n\n    this.game.animationStart();\n\n    Promise.all([\n      this.main.request\n        .post(\n          'game/' + this.game.gameId + '/round',\n          choice === undefined ? {} : {choice}\n        ),\n      new Promise(resolve =>\n        setTimeout(() => resolve(), this.main.config.roundAnimationDuration))\n    ]).then((result) => {\n\n      this.game.animationStop();\n\n      this.processResult(result[0]);\n\n      return null;\n    }).catch((err) => {\n\n      this.main.error(err);\n\n      this.game.animationStop();\n    });\n  }\n\n  /**\n   * Process Result\n   *\n   * @param {Object} roundData New round data\n   */\n  processResult(roundData) {\n\n    this.roundId = roundData.roundId;\n    this.partyChoice0 = roundData.partyChoice0;\n    this.partyChoice1 = roundData.partyChoice1;\n    this.winner = roundData.winner;\n\n    if (this.game.score[roundData.winner] !== undefined) {\n      this.game.score[roundData.winner]++;\n    }\n\n    this.game.createRound();\n  }\n}\n",
     "static": true,
     "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/round.js",
     "access": "public",
@@ -1970,7 +1970,7 @@
     "longname": "scripts/class/round.js~Round#processResult",
     "access": "public",
     "description": "Process Result",
-    "lineNumber": 57,
+    "lineNumber": 59,
     "params": [
       {
         "nullable": null,
@@ -1994,7 +1994,7 @@
     "longname": "scripts/class/round.js~Round#roundId",
     "access": "public",
     "description": null,
-    "lineNumber": 59,
+    "lineNumber": 61,
     "undocument": true,
     "type": {
       "types": [
@@ -2011,7 +2011,7 @@
     "longname": "scripts/class/round.js~Round#winner",
     "access": "public",
     "description": null,
-    "lineNumber": 62,
+    "lineNumber": 64,
     "undocument": true,
     "type": {
       "types": [
@@ -2034,7 +2034,7 @@
     "__docId__": 130,
     "kind": "file",
     "name": "scripts/class/step-game.js",
-    "content": "import { Step } from './step';\nimport { Game } from './game';\n\nexport class StepGame extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.round = 1;\n\n    this.iElement = this.main.dom.$('game');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.main.request.post('game', {\n      gameName: this.main.gameName,\n      gameType: this.main.gameType\n    }).then((gameData) => {\n\n      this.game = new Game(this.main, gameData);\n\n      this.game.init();\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
+    "content": "import { Step } from './step';\nimport { Game } from './game';\n\nexport class StepGame extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.round = 1;\n\n    this.iElement = this.main.dom.$('game');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.main.request.post('game', {\n      gameName: this.main.gameName,\n      gameType: this.main.gameType\n    }).then((gameData) => {\n\n      this.game = new Game(this.main, gameData);\n\n      this.game.init();\n\n      return null;\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
     "static": true,
     "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step-game.js",
     "access": "public",
@@ -2166,7 +2166,7 @@
     "__docId__": 138,
     "kind": "file",
     "name": "scripts/class/step-onboarding.js",
-    "content": "import { Main } from './main';\nimport { Step } from './step';\nimport { User } from './user';\n\nexport class StepOnboarding extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.name = 'onboarding';\n    this.iElement = this.main.dom.$('onboarding');\n    this.iForm = this.main.dom.$('onboardingForm');\n    this.iPromo = this.main.dom.$('onboardingPromo');\n    this.iName = this.main.dom.$('onboardingName');\n    this.iDescription = this.main.dom.$('onboardingDescription');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.initInfo();\n    this.initPromo();\n    this.initForm();\n  }\n\n  /**\n   * Init info block\n   */\n  initInfo() {\n\n    this.main.dom.html(this.iName, this.main.config.name);\n    this.main.dom.html(this.iDescription, this.main.config.description);\n  }\n\n  /**\n   * Init promo block\n   */\n  initPromo() {\n\n    this.main.dom.html(this.iPromo, '');\n\n    this.main.config.objects.forEach((object) => {\n\n      const img = this.main.dom.create('img');\n\n      img.src = 'images/' + object.icon;\n\n      this.iPromo.appendChild(img);\n    });\n  }\n\n  /**\n   * Init form\n   */\n  initForm() {\n\n    this.iForm.addEventListener('submit', (event) => {\n\n      event.preventDefault();\n\n      this.onSubsmit();\n    }, true);\n  }\n\n  /**\n   * Submit handler\n   */\n  onSubsmit() {\n\n    this.main.gameType = this.iForm.gameType.value;\n\n    this.main.request.post('user', {\n      username: this.iForm.username.value\n    }).then((userData) => {\n\n      this.main.user = new User(this.main, userData);\n\n      this.main.setStep(Main.stepGame);\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
+    "content": "import { Main } from './main';\nimport { Step } from './step';\nimport { User } from './user';\n\nexport class StepOnboarding extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.name = 'onboarding';\n    this.iElement = this.main.dom.$('onboarding');\n    this.iForm = this.main.dom.$('onboardingForm');\n    this.iPromo = this.main.dom.$('onboardingPromo');\n    this.iName = this.main.dom.$('onboardingName');\n    this.iDescription = this.main.dom.$('onboardingDescription');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.initInfo();\n    this.initPromo();\n    this.initForm();\n  }\n\n  /**\n   * Init info block\n   */\n  initInfo() {\n\n    this.main.dom.html(this.iName, this.main.config.name);\n    this.main.dom.html(this.iDescription, this.main.config.description);\n  }\n\n  /**\n   * Init promo block\n   */\n  initPromo() {\n\n    this.main.dom.html(this.iPromo, '');\n\n    this.main.config.objects.forEach((object) => {\n\n      const img = this.main.dom.create('img');\n\n      img.src = 'images/' + object.icon;\n\n      this.iPromo.appendChild(img);\n    });\n  }\n\n  /**\n   * Init form\n   */\n  initForm() {\n\n    this.iForm.addEventListener('submit', (event) => {\n\n      event.preventDefault();\n\n      this.onSubsmit();\n    }, true);\n  }\n\n  /**\n   * Submit handler\n   */\n  onSubsmit() {\n\n    this.main.gameType = this.iForm.gameType.value;\n\n    this.main.request.post('user', {\n      username: this.iForm.username.value\n    }).then((userData) => {\n\n      this.main.user = new User(this.main, userData);\n\n      this.main.setStep(Main.stepGame);\n\n      return null;\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
     "static": true,
     "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step-onboarding.js",
     "access": "public",

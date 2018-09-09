@@ -44,6 +44,8 @@ export class Main {
       this.config = Object.assign({}, this.config, config);
 
       this.setStep(Main.stepOnboarding);
+
+      return null;
     });
   }
 

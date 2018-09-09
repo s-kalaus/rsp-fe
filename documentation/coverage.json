@@ -42,7 +42,7 @@
         27,
         29,
         34,
-        57
+        59
       ]
     },
     "scripts/class/request.js": {
@@ -63,8 +63,8 @@
         17,
         18,
         19,
-        59,
-        62
+        61,
+        64
       ]
     },
     "scripts/class/step-game.js": {

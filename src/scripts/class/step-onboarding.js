@@ -84,6 +84,8 @@ export class StepOnboarding extends Step {
       this.main.user = new User(this.main, userData);
 
       this.main.setStep(Main.stepGame);
+
+      return null;
     }).catch((err) => this.main.error(err));
   }
 }

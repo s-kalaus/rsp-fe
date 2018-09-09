@@ -41,6 +41,8 @@ export class Round {
       this.game.animationStop();
 
       this.processResult(result[0]);
+
+      return null;
     }).catch((err) => {
 
       this.main.error(err);
