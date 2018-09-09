@@ -5,11 +5,13 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run",
-    "coverage": "./node_modules/.bin/karma start --code-coverage --single-run --reporters coverage-istanbul",
-    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "coverage": "./node_modules/.bin/rimraf ./coverage && ./node_modules/.bin/karma start --code-coverage --single-run --reporters coverage-istanbul",
+    "build": "./node_modules/.bin/rimraf ./dist && ./node_modules/.bin/webpack --config webpack.config.js",
     "start": "./node_modules/.bin/webpack --config webpack.config.dev.js --watch",
-    "doc": "./node_modules/.bin/esdoc",
-    "lint": "./node_modules/.bin/eslint --quiet --config .eslintrc.json src/scripts/* src/scripts/class/* --ignore-pattern *.spec.js"
+    "doc": "./node_modules/.bin/rimraf ./documentation && ./node_modules/.bin/esdoc",
+    "jscpd": "./node_modules/.bin/jscpd",
+    "lint": "./node_modules/.bin/eslint --quiet --config .eslintrc.json src/scripts/* src/scripts/class/* --ignore-pattern *.spec.js",
+    "build-full": "npm run lint && npm run jscpd && npm run coverage && npm run doc && npm run build"
   },
   "repository": {
     "type": "git",
@@ -45,6 +47,8 @@
     "html-webpack-plugin": "^3.2.0",
     "istanbul-instrumenter-loader": "^3.0.1",
     "jasmine-core": "^3.2.1",
+    "jscpd": "^0.6.23",
+    "rimraf": "^2.6.2",
     "karma": "^3.0.0",
     "karma-coverage": "^1.1.2",
     "karma-coverage-istanbul-reporter": "^2.0.4",

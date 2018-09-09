@@ -17,3 +17,4 @@ Frontend part of Rock, Scissors, Paper game.
 * `npm test` - run mocha unit tests
 * `npm run coverage` - run mocha unit tests & generate coverage report to `/coverage` folder
 * `npm run doc` - generate documentation to `/documentation` folder
+* `npm run build-full` - full tests & build prod shortcut
