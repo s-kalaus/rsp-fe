@@ -23,11 +23,8 @@
 }
 
 @media (min-width: $screen-xs) {
-  .row {
-    display: flex;
-  }
-
   .col-6 {
     width: 50%;
+    float: left;
   }
 }

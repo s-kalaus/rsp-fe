@@ -6,6 +6,10 @@ body {
   color: $color-text;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: $color-link;
 
