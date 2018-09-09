@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">scripts/class/request.spec.js | rsp-fe</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="FE part of Rock Scissors Paper game"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="rsp-fe"><meta property="twitter:description" content="FE part of Rock Scissors Paper game"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#class">class</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/dom.js~Dom.html">Dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/main.js~Main.html">Main</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/round.js~Round.html">Round</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-game.js~StepGame.html">StepGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-onboarding.js~StepOnboarding.html">StepOnboarding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step.js~Step.html">Step</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/user.js~User.html">User</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">scripts/class/request.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* global expect, Function, spyOn */
+
+import { Request } from &apos;./request&apos;;
+
+describe(&apos;Request&apos;, () =&gt; {
+  let main;
+  let inst;
+
+  beforeEach(() =&gt; {
+    main = {
+      config: {apiUrl: &apos;test&apos;},
+      user: {sessionId: &apos;test&apos;}
+    };
+    inst = new Request(main);
+  });
+
+  it(&apos;should exist and have defaults&apos;, function() {
+    expect(inst).toEqual(jasmine.any(Object));
+    expect(inst.main).toEqual(main);
+  });
+
+  describe(&apos;Function: get&apos;, () =&gt; {
+    it(&apos;should exist&apos;, function() {
+      expect(inst.get).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should call send&apos;, function() {
+      spyOn(inst, &apos;send&apos;);
+      inst.get(&apos;path&apos;);
+      expect(inst.send).toHaveBeenCalledWith(&apos;get&apos;, &apos;path&apos;);
+    });
+  });
+
+  describe(&apos;Function: post&apos;, () =&gt; {
+    it(&apos;should exist&apos;, function() {
+      expect(inst.post).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should call send&apos;, function() {
+      spyOn(inst, &apos;send&apos;);
+      inst.post(&apos;path&apos;, {test: 1});
+      expect(inst.send).toHaveBeenCalledWith(&apos;post&apos;, &apos;path&apos;, {test: 1});
+    });
+  });
+
+  describe(&apos;Function: onReadyStateChange&apos;, () =&gt; {
+    let resolve;
+    let reject;
+    let xhttp;
+    beforeEach(() =&gt; {
+      xhttp = {readyState: 4, status: 200, responseText: &apos;{&quot;success&quot;:true,&quot;data&quot;:{&quot;test&quot;:1}}&apos;};
+      resolve = jasmine.createSpy(&apos;resolve&apos;);
+      reject = jasmine.createSpy(&apos;reject&apos;);
+    });
+    it(&apos;should exist&apos;, function() {
+      expect(inst.onReadyStateChange).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should not call resolve/reject if readyState !== 4&apos;, function() {
+      xhttp.readyState = 0;
+      inst.onReadyStateChange(xhttp, resolve, reject);
+      expect(resolve).not.toHaveBeenCalled();
+      expect(reject).not.toHaveBeenCalled();
+    });
+    it(&apos;should call reject if status !== 200&apos;, function() {
+      xhttp.status = 500;
+      inst.onReadyStateChange(xhttp, resolve, reject);
+      expect(reject).toHaveBeenCalledWith(new Error(&apos;Response status incorrect&apos;));
+    });
+    it(&apos;should call reject if response can not be parsed&apos;, function() {
+      xhttp.responseText = &apos;-&apos;;
+      inst.onReadyStateChange(xhttp, resolve, reject);
+      expect(reject).toHaveBeenCalledWith(new Error(&apos;Response parse error&apos;));
+    });
+    it(&apos;should call reject if response is failed&apos;, function() {
+      xhttp.responseText = &apos;{&quot;success&quot;:false}&apos;;
+      inst.onReadyStateChange(xhttp, resolve, reject);
+      expect(reject).toHaveBeenCalledWith(new Error(&apos;Response is not successfull&apos;));
+    });
+    it(&apos;should call reject if response is failed (empty)&apos;, function() {
+      xhttp.responseText = &apos;0&apos;;
+      inst.onReadyStateChange(xhttp, resolve, reject);
+      expect(reject).toHaveBeenCalledWith(new Error(&apos;Response is not successfull&apos;));
+    });
+    it(&apos;should call resolve if everything ok&apos;, function() {
+      inst.onReadyStateChange(xhttp, resolve, reject);
+      expect(resolve).toHaveBeenCalledWith({test: 1});
+    });
+  });
+
+  describe(&apos;Function: send&apos;, () =&gt; {
+    let xhttp;
+    beforeEach(() =&gt; {
+      XMLHttpRequest = class {constructor() { return xhttp = this; }};
+      XMLHttpRequest.prototype.open = jasmine.createSpy(&apos;open&apos;);
+      XMLHttpRequest.prototype.setRequestHeader = jasmine.createSpy(&apos;setRequestHeader&apos;);
+      XMLHttpRequest.prototype.send = jasmine.createSpy(&apos;send&apos;);
+      XMLHttpRequest.prototype.triggerOnReadyStateChange = function () { this.onreadystatechange(); };
+    });
+    it(&apos;should exist&apos;, function() {
+      expect(inst.send).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should open request&apos;, function() {
+      inst.send(&apos;get&apos;, &apos;path&apos;, {test: 1});
+      expect(XMLHttpRequest.prototype.open).toHaveBeenCalledWith(&apos;GET&apos;, &apos;test/path&apos;, true);
+    });
+    it(&apos;should set auth header&apos;, function() {
+      inst.send(&apos;get&apos;, &apos;path&apos;, {test: 1});
+      expect(XMLHttpRequest.prototype.setRequestHeader).toHaveBeenCalledWith(&apos;Authorization&apos;, &apos;test&apos;);
+    });
+    it(&apos;should not set auth header&apos;, function() {
+      inst.main.user = null;
+      inst.send(&apos;get&apos;, &apos;path&apos;, {test: 1});
+      expect(XMLHttpRequest.prototype.setRequestHeader).not.toHaveBeenCalled();
+    });
+    it(&apos;should send request&apos;, function() {
+      inst.send(&apos;get&apos;, &apos;path&apos;, {test: 1});
+      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith(undefined);
+    });
+    it(&apos;should send request (post)&apos;, function() {
+      inst.send(&apos;post&apos;, &apos;path&apos;, {test: 1});
+      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith(&apos;{&quot;test&quot;:1}&apos;);
+    });
+    it(&apos;should send request (post, no data)&apos;, function() {
+      inst.send(&apos;post&apos;, &apos;path&apos;);
+      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith(&apos;{}&apos;);
+    });
+    it(&apos;should call onReadyStateChange&apos;, function() {
+      spyOn(inst, &apos;onReadyStateChange&apos;);
+      inst.send(&apos;get&apos;, &apos;path&apos;, {test: 1});
+      xhttp.onreadystatechange();
+      expect(inst.onReadyStateChange).toHaveBeenCalledWith(xhttp, jasmine.any(Function), jasmine.any(Function));
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

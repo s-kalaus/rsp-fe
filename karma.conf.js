@@ -6,19 +6,27 @@ module.exports = config => {
       require('karma-webpack'),
       require('karma-sourcemap-loader'),
       require('karma-jasmine'),
-      require('karma-phantomjs-launcher')
+      require('karma-phantomjs-launcher'),
+      require('karma-spec-reporter'),
+      require('karma-coverage-istanbul-reporter')
     ],
+    client: {
+      clearContext: false
+    }/*,
+    coverageReporter: {
+      type: 'html',
+      dir: 'coverage',
+      subdir: '.'
+    }*/,
     files: [
-      {
-        pattern: 'src/**/*.spec.js',
-        watched: false
-      }
+      './node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
+      './src/**/*.spec.js'
     ],
     preprocessors: {
-        'src/**/*.js': [ 'webpack', 'sourcemap' ]
+      'src/**/*.js': [ 'webpack', 'sourcemap' ]
     },
     webpack: require('./webpack.config.test'),
     browsers: ['PhantomJS'],
-    reporters: ['progress']
+    reporters: ['spec']
   });
 };

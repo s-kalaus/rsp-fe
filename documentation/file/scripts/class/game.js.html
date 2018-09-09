@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">scripts/class/game.js | rsp-fe</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="FE part of Rock Scissors Paper game"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="rsp-fe"><meta property="twitter:description" content="FE part of Rock Scissors Paper game"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#class">class</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/dom.js~Dom.html">Dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/main.js~Main.html">Main</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/round.js~Round.html">Round</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-game.js~StepGame.html">StepGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-onboarding.js~StepOnboarding.html">StepOnboarding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step.js~Step.html">Step</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/user.js~User.html">User</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">scripts/class/game.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Round } from &apos;./round&apos;;
+import { Main } from &apos;./main&apos;;
+
+/**
+ * Game
+ */
+export class Game {
+
+  /**
+   * Constructor
+   *
+   * @param {Object} main Main class reference
+   * @param {Object} data Game data
+   */
+  constructor(main, data) {
+
+    this.main = main;
+    this.gameId = data.gameId;
+    this.gameType = data.gameType;
+    this.rounds = [];
+    this.score = [0, 0];
+    this.computerRoundInterval = null;
+    this.computerRoundTimer = null;
+    this.iElement = this.main.dom.$(&apos;game&apos;);
+    this.iRound = this.main.dom.$(&apos;gameRound&apos;);
+    this.iParty0 = this.main.dom.$(&apos;gameParty0&apos;);
+    this.iParty1 = this.main.dom.$(&apos;gameParty1&apos;);
+    this.iPartyScore0 = this.main.dom.$(&apos;gamePartyScore0&apos;);
+    this.iPartyScore1 = this.main.dom.$(&apos;gamePartyScore1&apos;);
+    this.iUsername = this.main.dom.$(&apos;gameUsername&apos;);
+    this.iHumanControl = this.main.dom.$(&apos;gameHumanControl&apos;);
+    this.iComputerControl = this.main.dom.$(&apos;gameComputerControl&apos;);
+    this.iHumanControlStop = this.main.dom.$(&apos;gameHumanControlStop&apos;);
+    this.iComputerControlStop = this.main.dom.$(&apos;gameComputerControlStop&apos;);
+  }
+
+  /**
+   * Init
+   */
+  init() {
+
+    this.createComputerControl();
+    this.createHumanControl();
+    this.createRound();
+  }
+
+  /**
+   * Creates computer control
+   */
+  createComputerControl() {
+
+    this.iComputerControlStop.addEventListener(&apos;click&apos;, () =&gt; {
+
+      this.gameType = this.gameType = Main.gameTypePvc;
+
+      clearTimeout(this.computerRoundTimer);
+      clearInterval(this.computerRoundInterval);
+
+      this.update();
+    }, true);
+  }
+
+  /**
+   * Creates human control
+   */
+  createHumanControl() {
+
+    this.main.dom.html(this.iUsername, this.main.user.username);
+
+    this.main.config.objects.forEach((object, index) =&gt; {
+
+      const img = this.main.dom.create(&apos;img&apos;);
+
+      img.src = &apos;images/&apos; + object.icon;
+
+      img.onclick = () =&gt; this.round.finish(index);
+
+      this.iHumanControl.appendChild(img);
+    });
+
+    this.iHumanControlStop.addEventListener(&apos;click&apos;, () =&gt; {
+
+      this.gameType = this.gameType = Main.gameTypeCvc;
+
+      this.update();
+    }, true);
+  }
+
+  /**
+   * Creates round
+   */
+  createRound() {
+
+    this.round = new Round(this.main, this);
+
+    this.rounds.push(this.round);
+
+    this.rounds.splice(0, this.rounds.length - 5);
+
+    this.update();
+  }
+
+  /**
+   * Updates game ui
+   */
+  update() {
+
+    this.main.dom.html(this.iRound, this.round.num);
+
+    this.main.dom.css(this.iParty0, {backgroundImage: `url(images/${this.main.config.objects[this.round.partyChoice0].image})`});
+    this.main.dom.css(this.iParty1, {backgroundImage: `url(images/${this.main.config.objects[this.round.partyChoice1].image})`});
+
+    this.main.dom.html(this.iPartyScore0, this.score[0]);
+    this.main.dom.html(this.iPartyScore1, this.score[1]);
+
+    if (this.gameType === &apos;pvc&apos;) {
+
+      this.iElement.classList.add(&apos;pvc&apos;);
+    } else {
+
+      this.iElement.classList.remove(&apos;pvc&apos;);
+
+      this.main.dom.html(this.iComputerControl, this.main.config.cvcRoundDelay / 1000);
+
+      this.computerRoundInterval = setInterval(() =&gt;
+        this.updateComputerRoundCounter(), 1000);
+
+      this.computerRoundTimer = setTimeout(() =&gt;
+        this.round.finish(), this.main.config.cvcRoundDelay);
+    }
+  }
+
+  /**
+   * Update rounds counter
+   */
+  updateComputerRoundCounter() {
+
+    const counter = Number(this.main.dom.html(this.iComputerControl)) - 1;
+
+    this.main.dom.html(this.iComputerControl, counter);
+
+    if (counter &lt;= 0) {
+      clearInterval(this.computerRoundInterval);
+    }
+  }
+
+  /**
+   * Start animation
+   */
+  animationStart() {
+
+    this.iElement.classList.add(&apos;animated&apos;);
+  }
+
+  /**
+   * Stop animation
+   */
+  animationStop() {
+
+    this.iElement.classList.remove(&apos;animated&apos;);
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

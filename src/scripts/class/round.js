@@ -1,10 +1,16 @@
-/* global Promise */
+import { Promise } from 'bluebird';
 
 export class Round {
 
-  constructor(main, game, rounds) {
+  /**
+   * Constructor
+   *
+   * @param {Object} main Main class reference
+   * @param {Object} game Game data
+   */
+  constructor(main, game) {
 
-    const roundPrev = rounds.length ? rounds[rounds.length - 1] : null;
+    const roundPrev = game.rounds.length ? game.rounds[game.rounds.length - 1] : null;
 
     this.main = main;
     this.game = game;
@@ -13,6 +19,11 @@ export class Round {
     this.partyChoice1 = roundPrev ? roundPrev.partyChoice1 : 0;
   }
 
+  /**
+   * Finish round
+   *
+   * @param {Number} choice Choice index
+   */
   finish(choice) {
 
     this.game.animationStart();
@@ -34,10 +45,15 @@ export class Round {
 
       this.main.error(err);
 
-      this.game.animationStop()
+      this.game.animationStop();
     });
   }
 
+  /**
+   * Process Result
+   *
+   * @param {Object} roundData New round data
+   */
   processResult(roundData) {
 
     this.roundId = roundData.roundId;

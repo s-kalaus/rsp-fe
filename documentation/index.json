@@ -1,0 +1,2674 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "scripts/.external-ecmascript.js",
+    "static": true,
+    "longname": "scripts/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "scripts/class/dom.js",
+    "content": "/**\n * Dom\n */\nexport class Dom {\n\n  /**\n   * Get element by id\n   *\n   * @param {String} elementId id of element\n   *\n   * @returns {Object}\n   */\n  $(elementId) {\n\n    return document.getElementById(elementId);\n  }\n\n  /**\n   * Create new element\n   *\n   * @param {String} tagName Tag name of new element\n   *\n   * @returns {Object}\n   */\n  create(tagName) {\n\n    return document.createElement(tagName);\n  }\n\n  /**\n   * Assign html to element\n   *\n   * @param {Object} element Target element\n   * @param {String} html HTML to assign to element\n   *\n   * @returns {String}\n   */\n  html(element, html) {\n\n    if (html === undefined) {\n      return element.innerHTML;\n    }\n\n    return element.innerHTML = html;\n  }\n\n  /**\n   * Add styles to element\n   *\n   * @param {Object} element Target element\n   * @param {Object} styles key: value pairs of styles\n   *\n   * @returns {String}\n   */\n  css(element, styles) {\n\n    Object.assign(element.style, styles);\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/dom.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Dom",
+    "memberof": "scripts/class/dom.js",
+    "static": true,
+    "longname": "scripts/class/dom.js~Dom",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/dom.js",
+    "importStyle": "{Dom}",
+    "description": "Dom",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "name": "$",
+    "memberof": "scripts/class/dom.js~Dom",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/dom.js~Dom#$",
+    "access": "public",
+    "description": "Get element by id",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Object}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "elementId",
+        "description": "id of element"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "method",
+    "name": "create",
+    "memberof": "scripts/class/dom.js~Dom",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/dom.js~Dom#create",
+    "access": "public",
+    "description": "Create new element",
+    "lineNumber": 25,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Object}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "tagName",
+        "description": "Tag name of new element"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "method",
+    "name": "html",
+    "memberof": "scripts/class/dom.js~Dom",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/dom.js~Dom#html",
+    "access": "public",
+    "description": "Assign html to element",
+    "lineNumber": 38,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{String}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": "Target element"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "html",
+        "description": "HTML to assign to element"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "css",
+    "memberof": "scripts/class/dom.js~Dom",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/dom.js~Dom#css",
+    "access": "public",
+    "description": "Add styles to element",
+    "lineNumber": 55,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{String}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": "Target element"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "styles",
+        "description": "key: value pairs of styles"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "scripts/class/dom.spec.js",
+    "content": "/* global expect, Function, spyOn */\n\nimport { Dom } from './dom';\n\ndescribe('Dom', () => {\n  let inst;\n\n  beforeEach(() => {\n    inst = new Dom();\n  });\n\n  it('should exist', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n  });\n\n  describe('Function: create', () => {\n    it('should exist', function() {\n      expect(inst.create).toEqual(jasmine.any(Function));\n    });\n    it('should call document.createElement', function() {\n      spyOn(document, 'createElement');\n      inst.create('div');\n      expect(document.createElement).toHaveBeenCalledWith('div');\n    });\n  });\n\n  describe('Function: $', () => {\n    it('should exist', function() {\n      expect(inst.$).toEqual(jasmine.any(Function));\n    });\n    it('should call document.getElementById', function() {\n      spyOn(document, 'getElementById');\n      inst.$('id');\n      expect(document.getElementById).toHaveBeenCalledWith('id');\n    });\n  });\n\n  describe('Function: html', () => {\n    it('should exist', function() {\n      expect(inst.html).toEqual(jasmine.any(Function));\n    });\n    it('should return if undefined', function() {\n      expect(inst.html({innerHTML: 'test'})).toBe('test');\n    });\n    it('should set if defined', function() {\n      const el = {innerHTML: 'test'};\n      inst.html(el, 'updated');\n      expect(el.innerHTML).toBe('updated');\n    });\n  });\n\n  describe('Function: css', () => {\n    it('should exist', function() {\n      expect(inst.css).toEqual(jasmine.any(Function));\n    });\n    it('should set if defined', function() {\n      const el = {style: {test: 1}};\n      inst.css(el, {test: 2, other: 3});\n      expect(el.style).toEqual({test: 2, other: 3});\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/dom.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "scripts/class/game.js",
+    "content": "import { Round } from './round';\nimport { Main } from './main';\n\n/**\n * Game\n */\nexport class Game {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} data Game data\n   */\n  constructor(main, data) {\n\n    this.main = main;\n    this.gameId = data.gameId;\n    this.gameType = data.gameType;\n    this.rounds = [];\n    this.score = [0, 0];\n    this.computerRoundInterval = null;\n    this.computerRoundTimer = null;\n    this.iElement = this.main.dom.$('game');\n    this.iRound = this.main.dom.$('gameRound');\n    this.iParty0 = this.main.dom.$('gameParty0');\n    this.iParty1 = this.main.dom.$('gameParty1');\n    this.iPartyScore0 = this.main.dom.$('gamePartyScore0');\n    this.iPartyScore1 = this.main.dom.$('gamePartyScore1');\n    this.iUsername = this.main.dom.$('gameUsername');\n    this.iHumanControl = this.main.dom.$('gameHumanControl');\n    this.iComputerControl = this.main.dom.$('gameComputerControl');\n    this.iHumanControlStop = this.main.dom.$('gameHumanControlStop');\n    this.iComputerControlStop = this.main.dom.$('gameComputerControlStop');\n  }\n\n  /**\n   * Init\n   */\n  init() {\n\n    this.createComputerControl();\n    this.createHumanControl();\n    this.createRound();\n  }\n\n  /**\n   * Creates computer control\n   */\n  createComputerControl() {\n\n    this.iComputerControlStop.addEventListener('click', () => {\n\n      this.gameType = this.gameType = Main.gameTypePvc;\n\n      clearTimeout(this.computerRoundTimer);\n      clearInterval(this.computerRoundInterval);\n\n      this.update();\n    }, true);\n  }\n\n  /**\n   * Creates human control\n   */\n  createHumanControl() {\n\n    this.main.dom.html(this.iUsername, this.main.user.username);\n\n    this.main.config.objects.forEach((object, index) => {\n\n      const img = this.main.dom.create('img');\n\n      img.src = 'images/' + object.icon;\n\n      img.onclick = () => this.round.finish(index);\n\n      this.iHumanControl.appendChild(img);\n    });\n\n    this.iHumanControlStop.addEventListener('click', () => {\n\n      this.gameType = this.gameType = Main.gameTypeCvc;\n\n      this.update();\n    }, true);\n  }\n\n  /**\n   * Creates round\n   */\n  createRound() {\n\n    this.round = new Round(this.main, this);\n\n    this.rounds.push(this.round);\n\n    this.rounds.splice(0, this.rounds.length - 5);\n\n    this.update();\n  }\n\n  /**\n   * Updates game ui\n   */\n  update() {\n\n    this.main.dom.html(this.iRound, this.round.num);\n\n    this.main.dom.css(this.iParty0, {backgroundImage: `url(images/${this.main.config.objects[this.round.partyChoice0].image})`});\n    this.main.dom.css(this.iParty1, {backgroundImage: `url(images/${this.main.config.objects[this.round.partyChoice1].image})`});\n\n    this.main.dom.html(this.iPartyScore0, this.score[0]);\n    this.main.dom.html(this.iPartyScore1, this.score[1]);\n\n    if (this.gameType === 'pvc') {\n\n      this.iElement.classList.add('pvc');\n    } else {\n\n      this.iElement.classList.remove('pvc');\n\n      this.main.dom.html(this.iComputerControl, this.main.config.cvcRoundDelay / 1000);\n\n      this.computerRoundInterval = setInterval(() =>\n        this.updateComputerRoundCounter(), 1000);\n\n      this.computerRoundTimer = setTimeout(() =>\n        this.round.finish(), this.main.config.cvcRoundDelay);\n    }\n  }\n\n  /**\n   * Update rounds counter\n   */\n  updateComputerRoundCounter() {\n\n    const counter = Number(this.main.dom.html(this.iComputerControl)) - 1;\n\n    this.main.dom.html(this.iComputerControl, counter);\n\n    if (counter <= 0) {\n      clearInterval(this.computerRoundInterval);\n    }\n  }\n\n  /**\n   * Start animation\n   */\n  animationStart() {\n\n    this.iElement.classList.add('animated');\n  }\n\n  /**\n   * Stop animation\n   */\n  animationStop() {\n\n    this.iElement.classList.remove('animated');\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/game.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "class",
+    "name": "Game",
+    "memberof": "scripts/class/game.js",
+    "static": true,
+    "longname": "scripts/class/game.js~Game",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/game.js",
+    "importStyle": "{Game}",
+    "description": "Game",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 15,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "main",
+        "description": "Main class reference"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "Game data"
+      }
+    ]
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "main",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#main",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "name": "gameId",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#gameId",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "member",
+    "name": "gameType",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#gameType",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "rounds",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#rounds",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "score",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#score",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "computerRoundInterval",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#computerRoundInterval",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "computerRoundTimer",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#computerRoundTimer",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "iElement",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iElement",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "member",
+    "name": "iRound",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iRound",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "member",
+    "name": "iParty0",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iParty0",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "member",
+    "name": "iParty1",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iParty1",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "member",
+    "name": "iPartyScore0",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iPartyScore0",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "member",
+    "name": "iPartyScore1",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iPartyScore1",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "member",
+    "name": "iUsername",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iUsername",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "member",
+    "name": "iHumanControl",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iHumanControl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "member",
+    "name": "iComputerControl",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iComputerControl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "member",
+    "name": "iHumanControlStop",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iHumanControlStop",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "member",
+    "name": "iComputerControlStop",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#iComputerControlStop",
+    "access": "public",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "init",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#init",
+    "access": "public",
+    "description": "Init",
+    "lineNumber": 40,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "createComputerControl",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#createComputerControl",
+    "access": "public",
+    "description": "Creates computer control",
+    "lineNumber": 50,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "createHumanControl",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#createHumanControl",
+    "access": "public",
+    "description": "Creates human control",
+    "lineNumber": 66,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "name": "createRound",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#createRound",
+    "access": "public",
+    "description": "Creates round",
+    "lineNumber": 92,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 82,
+    "kind": "member",
+    "name": "round",
+    "memberof": "scripts/class/game.js~Game",
+    "static": false,
+    "longname": "scripts/class/game.js~Game#round",
+    "access": "public",
+    "description": null,
+    "lineNumber": 94,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "update",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#update",
+    "access": "public",
+    "description": "Updates game ui",
+    "lineNumber": 106,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "name": "updateComputerRoundCounter",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#updateComputerRoundCounter",
+    "access": "public",
+    "description": "Update rounds counter",
+    "lineNumber": 136,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "animationStart",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#animationStart",
+    "access": "public",
+    "description": "Start animation",
+    "lineNumber": 150,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "animationStop",
+    "memberof": "scripts/class/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/game.js~Game#animationStop",
+    "access": "public",
+    "description": "Stop animation",
+    "lineNumber": 158,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "name": "scripts/class/index.js",
+    "content": "export * from './main';\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
+    "name": "scripts/class/main.js",
+    "content": "/* global ENV */\n\nimport { Request } from './request';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Dom } from './dom';\n\n/**\n * Main\n */\nexport class Main {\n\n  /**\n   * Constructor\n   */\n  constructor() {\n\n    this.gameName = Main.gameName;\n    this.config = ENV;\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.dom = new Dom();\n\n    this.steps = {\n      onboarding: new StepOnboarding(this),\n      game: new StepGame(this)\n    };\n\n    this.request = new Request(this);\n  }\n\n  /**\n   * Init Game Schema\n   */\n  initGameSchema() {\n\n    this.request.get('static/' + this.gameName).then((config) => {\n\n      this.config = Object.assign({}, this.config, config);\n\n      this.setStep(Main.stepOnboarding);\n    });\n  }\n\n  /**\n   * Set Step\n   *\n   * @param {String} stepName Name of step\n   */\n  setStep(stepName) {\n\n    this.step = this.steps[stepName];\n\n    Object.keys(this.steps).forEach((theStepName) => stepName === theStepName\n      ? this.steps[theStepName].activate()\n      : this.steps[theStepName].deactivate()\n    );\n  }\n\n  /**\n   * Send error\n   *\n   * @param {Object} err Error object\n   */\n  error(err) {\n\n    // eslint-disable-next-line no-console\n    console.error(err);\n  }\n}\n\nMain.stepOnboarding = 'onboarding';\nMain.stepGame = 'game';\nMain.gameTypePvc = 'pvc';\nMain.gameTypeCvc = 'cvc';\nMain.gameName = 'rsp';\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/main.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 91,
+    "kind": "class",
+    "name": "Main",
+    "memberof": "scripts/class/main.js",
+    "static": true,
+    "longname": "scripts/class/main.js~Main",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/main.js",
+    "importStyle": "{Main}",
+    "description": "Main",
+    "lineNumber": 11,
+    "interface": false
+  },
+  {
+    "__docId__": 92,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/main.js~Main",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/main.js~Main#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 16
+  },
+  {
+    "__docId__": 93,
+    "kind": "member",
+    "name": "gameName",
+    "memberof": "scripts/class/main.js~Main",
+    "static": false,
+    "longname": "scripts/class/main.js~Main#gameName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "member",
+    "name": "config",
+    "memberof": "scripts/class/main.js~Main",
+    "static": false,
+    "longname": "scripts/class/main.js~Main#config",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 95,
+    "kind": "method",
+    "name": "init",
+    "memberof": "scripts/class/main.js~Main",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/main.js~Main#init",
+    "access": "public",
+    "description": "Init class",
+    "lineNumber": 25,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 96,
+    "kind": "member",
+    "name": "dom",
+    "memberof": "scripts/class/main.js~Main",
+    "static": false,
+    "longname": "scripts/class/main.js~Main#dom",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "member",
+    "name": "steps",
+    "memberof": "scripts/class/main.js~Main",
+    "static": false,
+    "longname": "scripts/class/main.js~Main#steps",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"onboarding\": *, \"game\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "member",
+    "name": "request",
+    "memberof": "scripts/class/main.js~Main",
+    "static": false,
+    "longname": "scripts/class/main.js~Main#request",
+    "access": "public",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "initGameSchema",
+    "memberof": "scripts/class/main.js~Main",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/main.js~Main#initGameSchema",
+    "access": "public",
+    "description": "Init Game Schema",
+    "lineNumber": 40,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 101,
+    "kind": "method",
+    "name": "setStep",
+    "memberof": "scripts/class/main.js~Main",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/main.js~Main#setStep",
+    "access": "public",
+    "description": "Set Step",
+    "lineNumber": 55,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "stepName",
+        "description": "Name of step"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 102,
+    "kind": "member",
+    "name": "step",
+    "memberof": "scripts/class/main.js~Main",
+    "static": false,
+    "longname": "scripts/class/main.js~Main#step",
+    "access": "public",
+    "description": null,
+    "lineNumber": 57,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "method",
+    "name": "error",
+    "memberof": "scripts/class/main.js~Main",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/main.js~Main#error",
+    "access": "public",
+    "description": "Send error",
+    "lineNumber": 70,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "err",
+        "description": "Error object"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 104,
+    "kind": "file",
+    "name": "scripts/class/main.spec.js",
+    "content": "/* global expect, ENV, Function, spyOn */\n\nimport { Promise } from 'bluebird';\n\nimport { Dom } from './dom';\nimport { Main } from './main';\nimport { StepOnboarding } from './step-onboarding';\nimport { StepGame } from './step-game';\nimport { Request } from './request';\n\ndescribe('Main', () => {\n  let inst;\n\n  beforeEach(() => {\n    inst = new Main();\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.gameName).toBe('rsp');\n    expect(inst.config).toEqual(ENV);\n  });\n\n  describe('Function: init', () => {\n    it('should exist', function() {\n      expect(inst.init).toEqual(jasmine.any(Function));\n    });\n    it('should set dom', function() {\n      inst.init();\n      expect(inst.dom).toEqual(new Dom());\n    });\n    it('should set steps', function() {\n      inst.init();\n      expect(inst.steps).toEqual({\n        onboarding: new StepOnboarding(inst),\n        game: new StepGame(inst)\n      });\n    });\n    it('should set request', function() {\n      inst.init();\n      expect(inst.request).toEqual(new Request(inst));\n    });\n  });\n\n  describe('Function: initGameSchema', () => {\n    beforeEach(() => {\n      inst.init();\n      spyOn(inst, 'setStep');\n    });\n    it('should exist', function() {\n      expect(inst.initGameSchema).toEqual(jasmine.any(Function));\n    });\n    it('should call request.get', function() {\n      spyOn(inst.request, 'get').and.returnValue({then: () => ({})});\n      inst.initGameSchema();\n      expect(inst.request.get).toHaveBeenCalledWith('static/rsp');\n    });\n    it('should set config', function() {\n      spyOn(inst.request, 'get').and.returnValue({then: (callback) => callback({test: 1})});\n      inst.initGameSchema();\n      expect(inst.config).toEqual({apiUrl: 'api-url', test: 1});\n    });\n    it('should call setStep', function() {\n      spyOn(inst.request, 'get').and.returnValue({then: (callback) => callback({test: 1})});\n      inst.initGameSchema();\n      expect(inst.setStep).toHaveBeenCalledWith('onboarding');\n    });\n  });\n\n  describe('Function: setStep', () => {\n    beforeEach(() => {\n      inst.init();\n    });\n    it('should exist', function() {\n      expect(inst.setStep).toEqual(jasmine.any(Function));\n    });\n    it('should call init onboarding', function() {\n      spyOn(inst.steps.onboarding, 'activate');\n      spyOn(inst.steps.game, 'deactivate');\n      inst.setStep('onboarding');\n      expect(inst.steps.onboarding.activate).toHaveBeenCalledWith();\n      expect(inst.steps.game.deactivate).toHaveBeenCalledWith();\n    });\n  });\n\n  describe('Function: error', () => {\n    it('should exist', function() {\n      expect(inst.error).toEqual(jasmine.any(Function));\n    });\n    it('should log to console', function() {\n      spyOn(console, 'error');\n      const err = new Error('test');\n      inst.error(err);\n      expect(console.error).toHaveBeenCalledWith(err);\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/main.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 105,
+    "kind": "file",
+    "name": "scripts/class/request.js",
+    "content": "import { Promise } from 'bluebird';\n\nexport class Request {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    this.main = main;\n  }\n\n  /**\n   * GET request\n   *\n   * @param {Object} path URL path\n   */\n  get(path) {\n\n    return this.send('get', path);\n  }\n\n  /**\n   * POST request\n   *\n   * @param {Object} path URL path\n   * @param {Object} data Data to post\n   */\n  post(path, data) {\n\n    return this.send('post', path, data);\n  }\n\n  /**\n   * Handles XHR request response\n   *\n   * @param {Object} xhttp Request object\n   * @param {Function} resolve Resolve function\n   * @param {Function} reject Reject function\n   */\n  onReadyStateChange(xhttp, resolve, reject) {\n\n    if (xhttp.readyState !== 4) {\n      return;\n    }\n\n    if (xhttp.status !== 200) {\n      return reject(new Error('Response status incorrect'));\n    }\n\n    try {\n\n      const response = JSON.parse(xhttp.responseText);\n\n      if (!response || !response.success) {\n        return reject(new Error('Response is not successfull'));\n      }\n\n      resolve(response.data);\n    } catch (e) {\n\n      reject(new Error('Response parse error'));\n    }\n  }\n\n  /**\n   * Send request\n   *\n   * @param {String} method Method to use\n   * @param {Object} path URL path\n   * @param {Object} data Data to post\n   */\n  send(method, path, data = {}) {\n\n    return new Promise((resolve, reject) => {\n\n      let body;\n      const xhttp = new XMLHttpRequest();\n\n      xhttp.onreadystatechange = () =>\n        this.onReadyStateChange(xhttp, resolve, reject);\n\n      xhttp.open(method.toUpperCase(), this.main.config.apiUrl + '/' + path, true);\n\n      if (this.main.user) {\n        xhttp.setRequestHeader('Authorization', this.main.user.sessionId);\n      }\n\n      if (method === 'post') {\n\n        xhttp.setRequestHeader('Content-Type', 'application/json');\n\n        body = JSON.stringify(data);\n      }\n\n      xhttp.send(body);\n    });\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/request.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 106,
+    "kind": "class",
+    "name": "Request",
+    "memberof": "scripts/class/request.js",
+    "static": true,
+    "longname": "scripts/class/request.js~Request",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/request.js",
+    "importStyle": "{Request}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 107,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/request.js~Request#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 10,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "main",
+        "description": "Main class reference"
+      }
+    ]
+  },
+  {
+    "__docId__": 108,
+    "kind": "member",
+    "name": "main",
+    "memberof": "scripts/class/request.js~Request",
+    "static": false,
+    "longname": "scripts/class/request.js~Request#main",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "method",
+    "name": "get",
+    "memberof": "scripts/class/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/request.js~Request#get",
+    "access": "public",
+    "description": "GET request",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "URL path"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "post",
+    "memberof": "scripts/class/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/request.js~Request#post",
+    "access": "public",
+    "description": "POST request",
+    "lineNumber": 31,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "URL path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "Data to post"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "method",
+    "name": "onReadyStateChange",
+    "memberof": "scripts/class/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/request.js~Request#onReadyStateChange",
+    "access": "public",
+    "description": "Handles XHR request response",
+    "lineNumber": 43,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "xhttp",
+        "description": "Request object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "resolve",
+        "description": "Resolve function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "reject",
+        "description": "Reject function"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "method",
+    "name": "send",
+    "memberof": "scripts/class/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/request.js~Request#send",
+    "access": "public",
+    "description": "Send request",
+    "lineNumber": 75,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": "Method to use"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "URL path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "Data to post"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 113,
+    "kind": "file",
+    "name": "scripts/class/request.spec.js",
+    "content": "/* global expect, Function, spyOn */\n\nimport { Request } from './request';\n\ndescribe('Request', () => {\n  let main;\n  let inst;\n\n  beforeEach(() => {\n    main = {\n      config: {apiUrl: 'test'},\n      user: {sessionId: 'test'}\n    };\n    inst = new Request(main);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n  });\n\n  describe('Function: get', () => {\n    it('should exist', function() {\n      expect(inst.get).toEqual(jasmine.any(Function));\n    });\n    it('should call send', function() {\n      spyOn(inst, 'send');\n      inst.get('path');\n      expect(inst.send).toHaveBeenCalledWith('get', 'path');\n    });\n  });\n\n  describe('Function: post', () => {\n    it('should exist', function() {\n      expect(inst.post).toEqual(jasmine.any(Function));\n    });\n    it('should call send', function() {\n      spyOn(inst, 'send');\n      inst.post('path', {test: 1});\n      expect(inst.send).toHaveBeenCalledWith('post', 'path', {test: 1});\n    });\n  });\n\n  describe('Function: onReadyStateChange', () => {\n    let resolve;\n    let reject;\n    let xhttp;\n    beforeEach(() => {\n      xhttp = {readyState: 4, status: 200, responseText: '{\"success\":true,\"data\":{\"test\":1}}'};\n      resolve = jasmine.createSpy('resolve');\n      reject = jasmine.createSpy('reject');\n    });\n    it('should exist', function() {\n      expect(inst.onReadyStateChange).toEqual(jasmine.any(Function));\n    });\n    it('should not call resolve/reject if readyState !== 4', function() {\n      xhttp.readyState = 0;\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(resolve).not.toHaveBeenCalled();\n      expect(reject).not.toHaveBeenCalled();\n    });\n    it('should call reject if status !== 200', function() {\n      xhttp.status = 500;\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response status incorrect'));\n    });\n    it('should call reject if response can not be parsed', function() {\n      xhttp.responseText = '-';\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response parse error'));\n    });\n    it('should call reject if response is failed', function() {\n      xhttp.responseText = '{\"success\":false}';\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response is not successfull'));\n    });\n    it('should call reject if response is failed (empty)', function() {\n      xhttp.responseText = '0';\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(reject).toHaveBeenCalledWith(new Error('Response is not successfull'));\n    });\n    it('should call resolve if everything ok', function() {\n      inst.onReadyStateChange(xhttp, resolve, reject);\n      expect(resolve).toHaveBeenCalledWith({test: 1});\n    });\n  });\n\n  describe('Function: send', () => {\n    let xhttp;\n    beforeEach(() => {\n      XMLHttpRequest = class {constructor() { return xhttp = this; }};\n      XMLHttpRequest.prototype.open = jasmine.createSpy('open');\n      XMLHttpRequest.prototype.setRequestHeader = jasmine.createSpy('setRequestHeader');\n      XMLHttpRequest.prototype.send = jasmine.createSpy('send');\n      XMLHttpRequest.prototype.triggerOnReadyStateChange = function () { this.onreadystatechange(); };\n    });\n    it('should exist', function() {\n      expect(inst.send).toEqual(jasmine.any(Function));\n    });\n    it('should open request', function() {\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.open).toHaveBeenCalledWith('GET', 'test/path', true);\n    });\n    it('should set auth header', function() {\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.setRequestHeader).toHaveBeenCalledWith('Authorization', 'test');\n    });\n    it('should not set auth header', function() {\n      inst.main.user = null;\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.setRequestHeader).not.toHaveBeenCalled();\n    });\n    it('should send request', function() {\n      inst.send('get', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith(undefined);\n    });\n    it('should send request (post)', function() {\n      inst.send('post', 'path', {test: 1});\n      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith('{\"test\":1}');\n    });\n    it('should send request (post, no data)', function() {\n      inst.send('post', 'path');\n      expect(XMLHttpRequest.prototype.send).toHaveBeenCalledWith('{}');\n    });\n    it('should call onReadyStateChange', function() {\n      spyOn(inst, 'onReadyStateChange');\n      inst.send('get', 'path', {test: 1});\n      xhttp.onreadystatechange();\n      expect(inst.onReadyStateChange).toHaveBeenCalledWith(xhttp, jasmine.any(Function), jasmine.any(Function));\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/request.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 114,
+    "kind": "file",
+    "name": "scripts/class/round.js",
+    "content": "import { Promise } from 'bluebird';\n\nexport class Round {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} game Game data\n   */\n  constructor(main, game) {\n\n    const roundPrev = game.rounds.length ? game.rounds[game.rounds.length - 1] : null;\n\n    this.main = main;\n    this.game = game;\n    this.num = roundPrev ? roundPrev.num + 1 : 1;\n    this.partyChoice0 = roundPrev ? roundPrev.partyChoice0 : 0;\n    this.partyChoice1 = roundPrev ? roundPrev.partyChoice1 : 0;\n  }\n\n  /**\n   * Finish round\n   *\n   * @param {Number} choice Choice index\n   */\n  finish(choice) {\n\n    this.game.animationStart();\n\n    Promise.all([\n      this.main.request\n        .post(\n          'game/' + this.game.gameId + '/round',\n          choice === undefined ? {} : {choice}\n        ),\n      new Promise(resolve =>\n        setTimeout(() => resolve(), this.main.config.roundAnimationDuration))\n    ]).then((result) => {\n\n      this.game.animationStop();\n\n      this.processResult(result[0]);\n    }).catch((err) => {\n\n      this.main.error(err);\n\n      this.game.animationStop();\n    });\n  }\n\n  /**\n   * Process Result\n   *\n   * @param {Object} roundData New round data\n   */\n  processResult(roundData) {\n\n    this.roundId = roundData.roundId;\n    this.partyChoice0 = roundData.partyChoice0;\n    this.partyChoice1 = roundData.partyChoice1;\n    this.winner = roundData.winner;\n\n    if (this.game.score[roundData.winner] !== undefined) {\n      this.game.score[roundData.winner]++;\n    }\n\n    this.game.createRound();\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/round.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 115,
+    "kind": "class",
+    "name": "Round",
+    "memberof": "scripts/class/round.js",
+    "static": true,
+    "longname": "scripts/class/round.js~Round",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/round.js",
+    "importStyle": "{Round}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 116,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/round.js~Round",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/round.js~Round#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "main",
+        "description": "Main class reference"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "game",
+        "description": "Game data"
+      }
+    ]
+  },
+  {
+    "__docId__": 117,
+    "kind": "member",
+    "name": "main",
+    "memberof": "scripts/class/round.js~Round",
+    "static": false,
+    "longname": "scripts/class/round.js~Round#main",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "member",
+    "name": "game",
+    "memberof": "scripts/class/round.js~Round",
+    "static": false,
+    "longname": "scripts/class/round.js~Round#game",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "member",
+    "name": "num",
+    "memberof": "scripts/class/round.js~Round",
+    "static": false,
+    "longname": "scripts/class/round.js~Round#num",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "member",
+    "name": "partyChoice0",
+    "memberof": "scripts/class/round.js~Round",
+    "static": false,
+    "longname": "scripts/class/round.js~Round#partyChoice0",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 121,
+    "kind": "member",
+    "name": "partyChoice1",
+    "memberof": "scripts/class/round.js~Round",
+    "static": false,
+    "longname": "scripts/class/round.js~Round#partyChoice1",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 122,
+    "kind": "method",
+    "name": "finish",
+    "memberof": "scripts/class/round.js~Round",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/round.js~Round#finish",
+    "access": "public",
+    "description": "Finish round",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "choice",
+        "description": "Choice index"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 123,
+    "kind": "method",
+    "name": "processResult",
+    "memberof": "scripts/class/round.js~Round",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/round.js~Round#processResult",
+    "access": "public",
+    "description": "Process Result",
+    "lineNumber": 57,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "roundData",
+        "description": "New round data"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 124,
+    "kind": "member",
+    "name": "roundId",
+    "memberof": "scripts/class/round.js~Round",
+    "static": false,
+    "longname": "scripts/class/round.js~Round#roundId",
+    "access": "public",
+    "description": null,
+    "lineNumber": 59,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "member",
+    "name": "winner",
+    "memberof": "scripts/class/round.js~Round",
+    "static": false,
+    "longname": "scripts/class/round.js~Round#winner",
+    "access": "public",
+    "description": null,
+    "lineNumber": 62,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "file",
+    "name": "scripts/class/step-game.js",
+    "content": "import { Step } from './step';\nimport { Game } from './game';\n\nexport class StepGame extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.round = 1;\n\n    this.iElement = this.main.dom.$('game');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.main.request.post('game', {\n      gameName: this.main.gameName,\n      gameType: this.main.gameType\n    }).then((gameData) => {\n\n      this.game = new Game(this.main, gameData);\n\n      this.game.init();\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step-game.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 129,
+    "kind": "class",
+    "name": "StepGame",
+    "memberof": "scripts/class/step-game.js",
+    "static": true,
+    "longname": "scripts/class/step-game.js~StepGame",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/step-game.js",
+    "importStyle": "{StepGame}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "scripts/class/step.js~Step"
+    ]
+  },
+  {
+    "__docId__": 130,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/step-game.js~StepGame",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-game.js~StepGame#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "main",
+        "description": "Main class reference"
+      }
+    ]
+  },
+  {
+    "__docId__": 131,
+    "kind": "member",
+    "name": "round",
+    "memberof": "scripts/class/step-game.js~StepGame",
+    "static": false,
+    "longname": "scripts/class/step-game.js~StepGame#round",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "member",
+    "name": "iElement",
+    "memberof": "scripts/class/step-game.js~StepGame",
+    "static": false,
+    "longname": "scripts/class/step-game.js~StepGame#iElement",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "method",
+    "name": "init",
+    "memberof": "scripts/class/step-game.js~StepGame",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-game.js~StepGame#init",
+    "access": "public",
+    "description": "Init class",
+    "lineNumber": 23,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 134,
+    "kind": "member",
+    "name": "game",
+    "memberof": "scripts/class/step-game.js~StepGame",
+    "static": false,
+    "longname": "scripts/class/step-game.js~StepGame#game",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "file",
+    "name": "scripts/class/step-game.spec.js",
+    "content": "/* global expect, ENV, Function, spyOn */\n\nimport { Promise } from 'bluebird';\n\nimport { Game } from './game';\nimport { StepGame } from './step-game';\n\ndescribe('StepGame', () => {\n  let main;\n  let inst;\n  let resolve;\n  let reject;\n\n  beforeEach(() => {\n    main = {\n      config: {objects: [{image: ''}]},\n      user: {username: 'test'},\n      dom: {css: () => {}, $: () => ({classList: {add: () => {}, remove: () => {}}, addEventListener: () => {}, appendChild: () => {}}), create: () => ({addEventListener: () => {}}), html: () => {}},\n      request: {post: jasmine.createSpy('post').and.returnValue({then: (_resolve) => { resolve = _resolve; return { catch: (_reject) => reject = _reject }; }})},\n      gameName: 2,\n      gameType: 3,\n      error: jasmine.createSpy('error')\n    };\n    inst = new StepGame(main);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n    expect(inst.round).toBe(1);\n    expect(inst.iElement).toEqual(jasmine.any(Object));\n  });\n\n  describe('Function: init', () => {\n    it('should exist', function() {\n      expect(inst.init).toEqual(jasmine.any(Function));\n    });\n    it('should set game', function() {\n      inst.init();\n      resolve({test: 1});\n      expect(inst.game).toEqual(jasmine.any(Object));\n    });\n    it('should react on error', function() {\n      const err = new Error('test');\n      inst.init();\n      reject(err);\n      expect(inst.main.error).toHaveBeenCalledWith(err);\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step-game.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 136,
+    "kind": "file",
+    "name": "scripts/class/step-onboarding.js",
+    "content": "import { Main } from './main';\nimport { Step } from './step';\nimport { User } from './user';\n\nexport class StepOnboarding extends Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    super(main);\n\n    this.name = 'onboarding';\n    this.iElement = this.main.dom.$('onboarding');\n    this.iForm = this.main.dom.$('onboardingForm');\n    this.iPromo = this.main.dom.$('onboardingPromo');\n    this.iName = this.main.dom.$('onboardingName');\n    this.iDescription = this.main.dom.$('onboardingDescription');\n  }\n\n  /**\n   * Init class\n   */\n  init() {\n\n    this.initInfo();\n    this.initPromo();\n    this.initForm();\n  }\n\n  /**\n   * Init info block\n   */\n  initInfo() {\n\n    this.main.dom.html(this.iName, this.main.config.name);\n    this.main.dom.html(this.iDescription, this.main.config.description);\n  }\n\n  /**\n   * Init promo block\n   */\n  initPromo() {\n\n    this.main.dom.html(this.iPromo, '');\n\n    this.main.config.objects.forEach((object) => {\n\n      const img = this.main.dom.create('img');\n\n      img.src = 'images/' + object.icon;\n\n      this.iPromo.appendChild(img);\n    });\n  }\n\n  /**\n   * Init form\n   */\n  initForm() {\n\n    this.iForm.addEventListener('submit', (event) => {\n\n      event.preventDefault();\n\n      this.onSubsmit();\n    }, true);\n  }\n\n  /**\n   * Submit handler\n   */\n  onSubsmit() {\n\n    this.main.gameType = this.iForm.gameType.value;\n\n    this.main.request.post('user', {\n      username: this.iForm.username.value\n    }).then((userData) => {\n\n      this.main.user = new User(this.main, userData);\n\n      this.main.setStep(Main.stepGame);\n    }).catch((err) => this.main.error(err));\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step-onboarding.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 137,
+    "kind": "class",
+    "name": "StepOnboarding",
+    "memberof": "scripts/class/step-onboarding.js",
+    "static": true,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/step-onboarding.js",
+    "importStyle": "{StepOnboarding}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "scripts/class/step.js~Step"
+    ]
+  },
+  {
+    "__docId__": 138,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "main",
+        "description": "Main class reference"
+      }
+    ]
+  },
+  {
+    "__docId__": 139,
+    "kind": "member",
+    "name": "name",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#name",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 140,
+    "kind": "member",
+    "name": "iElement",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#iElement",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "member",
+    "name": "iForm",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#iForm",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "member",
+    "name": "iPromo",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#iPromo",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 143,
+    "kind": "member",
+    "name": "iName",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#iName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "member",
+    "name": "iDescription",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#iDescription",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 145,
+    "kind": "method",
+    "name": "init",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#init",
+    "access": "public",
+    "description": "Init class",
+    "lineNumber": 27,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 146,
+    "kind": "method",
+    "name": "initInfo",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#initInfo",
+    "access": "public",
+    "description": "Init info block",
+    "lineNumber": 37,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 147,
+    "kind": "method",
+    "name": "initPromo",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#initPromo",
+    "access": "public",
+    "description": "Init promo block",
+    "lineNumber": 46,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 148,
+    "kind": "method",
+    "name": "initForm",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#initForm",
+    "access": "public",
+    "description": "Init form",
+    "lineNumber": 63,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 149,
+    "kind": "method",
+    "name": "onSubsmit",
+    "memberof": "scripts/class/step-onboarding.js~StepOnboarding",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step-onboarding.js~StepOnboarding#onSubsmit",
+    "access": "public",
+    "description": "Submit handler",
+    "lineNumber": 76,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 150,
+    "kind": "file",
+    "name": "scripts/class/step.js",
+    "content": "export class Step {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   */\n  constructor(main) {\n\n    this.main = main;\n  }\n\n  /**\n   * Activate step\n   */\n  activate() {\n\n    this.iElement.classList.remove('d-none');\n\n    this.init();\n  }\n\n  /**\n   * Deactivate step\n   */\n  deactivate() {\n\n    this.iElement.classList.add('d-none');\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 151,
+    "kind": "class",
+    "name": "Step",
+    "memberof": "scripts/class/step.js",
+    "static": true,
+    "longname": "scripts/class/step.js~Step",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/step.js",
+    "importStyle": "{Step}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 152,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/step.js~Step",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step.js~Step#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "main",
+        "description": "Main class reference"
+      }
+    ]
+  },
+  {
+    "__docId__": 153,
+    "kind": "member",
+    "name": "main",
+    "memberof": "scripts/class/step.js~Step",
+    "static": false,
+    "longname": "scripts/class/step.js~Step#main",
+    "access": "public",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "method",
+    "name": "activate",
+    "memberof": "scripts/class/step.js~Step",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step.js~Step#activate",
+    "access": "public",
+    "description": "Activate step",
+    "lineNumber": 16,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 155,
+    "kind": "method",
+    "name": "deactivate",
+    "memberof": "scripts/class/step.js~Step",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/step.js~Step#deactivate",
+    "access": "public",
+    "description": "Deactivate step",
+    "lineNumber": 26,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 156,
+    "kind": "file",
+    "name": "scripts/class/step.spec.js",
+    "content": "/* global expect, Function, spyOn */\n\nimport { Step } from './step';\n\ndescribe('Step', () => {\n  let main;\n  let inst;\n\n  beforeEach(() => {\n    main = {test: 1};\n    inst = new Step(main);\n  });\n\n  it('should exist', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n  });\n\n  describe('Function: activate', () => {\n    it('should exist', function() {\n      expect(inst.activate).toEqual(jasmine.any(Function));\n    });\n    it('should call iElement.classList.remove', function() {\n      inst.init = jasmine.createSpy('init');\n      inst.iElement = {classList: {remove: jasmine.createSpy('remove')}};\n      inst.activate();\n      expect(inst.iElement.classList.remove).toHaveBeenCalledWith('d-none');\n      expect(inst.init).toHaveBeenCalledWith();\n    });\n  });\n\n  describe('Function: deactivate', () => {\n    it('should exist', function() {\n      expect(inst.deactivate).toEqual(jasmine.any(Function));\n    });\n    it('should call iElement.classList.add', function() {\n      inst.iElement = {classList: {add: jasmine.createSpy('add')}};\n      inst.deactivate();\n      expect(inst.iElement.classList.add).toHaveBeenCalledWith('d-none');\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/step.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 157,
+    "kind": "file",
+    "name": "scripts/class/user.js",
+    "content": "export class User {\n\n  /**\n   * Constructor\n   *\n   * @param {Object} main Main class reference\n   * @param {Object} data User data\n   */\n  constructor(main, data) {\n\n    this.main = main;\n    this.sessionId = data.sessionId;\n    this.username = data.username;\n    this.gameType = data.gameType;\n  }\n}\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/user.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 158,
+    "kind": "class",
+    "name": "User",
+    "memberof": "scripts/class/user.js",
+    "static": true,
+    "longname": "scripts/class/user.js~User",
+    "access": "public",
+    "export": true,
+    "importPath": "rsp-fe/scripts/class/user.js",
+    "importStyle": "{User}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 159,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "scripts/class/user.js~User",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "scripts/class/user.js~User#constructor",
+    "access": "public",
+    "description": "Constructor",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "main",
+        "description": "Main class reference"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "User data"
+      }
+    ]
+  },
+  {
+    "__docId__": 160,
+    "kind": "member",
+    "name": "main",
+    "memberof": "scripts/class/user.js~User",
+    "static": false,
+    "longname": "scripts/class/user.js~User#main",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "member",
+    "name": "sessionId",
+    "memberof": "scripts/class/user.js~User",
+    "static": false,
+    "longname": "scripts/class/user.js~User#sessionId",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "member",
+    "name": "username",
+    "memberof": "scripts/class/user.js~User",
+    "static": false,
+    "longname": "scripts/class/user.js~User#username",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "member",
+    "name": "gameType",
+    "memberof": "scripts/class/user.js~User",
+    "static": false,
+    "longname": "scripts/class/user.js~User#gameType",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "file",
+    "name": "scripts/class/user.spec.js",
+    "content": "/* global expect, Function, spyOn */\n\nimport { User } from './user';\n\ndescribe('User', () => {\n  let main;\n  let data;\n  let inst;\n\n  beforeEach(() => {\n    main = {test: 1};\n    data = {sessionId: 1, username: 2, gameType: 3};\n    inst = new User(main, data);\n  });\n\n  it('should exist and have defaults', function() {\n    expect(inst).toEqual(jasmine.any(Object));\n    expect(inst.main).toEqual(main);\n    expect(inst.sessionId).toBe(1);\n    expect(inst.username).toBe(2);\n    expect(inst.gameType).toBe(3);\n  });\n});\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/class/user.spec.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 165,
+    "kind": "file",
+    "name": "scripts/index.js",
+    "content": "import { Main } from './class';\n\nimport '../styles/main.scss';\n\nconst rsp = new Main();\n\nwindow.addEventListener('load', () => {\n\n  rsp.init();\n\n  rsp.initGameSchema();\n}, true);\n\n",
+    "static": true,
+    "longname": "/home/dev/Dropbox/www/rsp-fe/src/scripts/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 166,
+    "kind": "variable",
+    "name": "rsp",
+    "memberof": "scripts/index.js",
+    "static": true,
+    "longname": "scripts/index.js~rsp",
+    "access": "public",
+    "export": false,
+    "importPath": "rsp-fe/scripts/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "scripts/class/main.js~Main"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "kind": "index",
+    "content": "# rsp-fe\n\nFrontend part of Rock, Scissors, Paper game.\n\n[![travis ci](https://travis-ci.org/s-kalaus/rsp-fe.svg?branch=master)](https://travis-ci.org/s-kalaus/rsp-fe)\n\n[Coverage Report](https://s-kalaus.github.io/rsp-fe/coverage/lcov-report/index.html)\n\n[Documentation](https://s-kalaus.github.io/rsp-fe/documentation/index.html)\n\n[Demo](https://s-kalaus.github.io/rsp-fe/dist/index.html)\n\n## Development\n* `npm run build` - build production version (to `/dist`)\n* `npm start` - run in development mode (watcher)\n* `npm run lint` - run linter\n* `npm test` - run mocha unit tests\n* `npm run coverage` - run mocha unit tests & generate coverage report to `/coverage` folder\n* `npm run doc` - generate documentation to `/documentation` folder\n",
+    "longname": "/home/dev/Dropbox/www/rsp-fe/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"rsp-fe\",\n  \"version\": \"1.0.0\",\n  \"description\": \"FE part of Rock Scissors Paper game\",\n  \"main\": \"dist/index.js\",\n  \"scripts\": {\n    \"test\": \"./node_modules/.bin/karma start --single-run\",\n    \"coverage\": \"./node_modules/.bin/karma start --code-coverage --single-run --reporters coverage-istanbul\",\n    \"build\": \"./node_modules/.bin/webpack --config webpack.config.js\",\n    \"start\": \"./node_modules/.bin/webpack --config webpack.config.dev.js --watch\",\n    \"doc\": \"./node_modules/.bin/esdoc\",\n    \"lint\": \"./node_modules/.bin/eslint --quiet --config .eslintrc.json src/scripts/* src/scripts/class/* --ignore-pattern *.spec.js\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+ssh://git@github.com/s-kalaus/rsp-fe.git\"\n  },\n  \"keywords\": [\n    \"game\",\n    \"rock\",\n    \"scossors\",\n    \"paper\"\n  ],\n  \"author\": {\n    \"name\": \"Sergey Kalaus\",\n    \"email\": \"sergey@kalaus.ru\",\n    \"url\": \"http://kalaus.ru\"\n  },\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/s-kalaus/rsp-fe/issues\"\n  },\n  \"homepage\": \"https://github.com/s-kalaus/rsp-fe#readme\",\n  \"devDependencies\": {\n    \"@babel/core\": \"^7.0.0\",\n    \"@babel/preset-env\": \"^7.0.0\",\n    \"babel-loader\": \"^8.0.2\",\n    \"bluebird\": \"^3.5.2\",\n    \"copy-webpack-plugin\": \"^4.5.2\",\n    \"css-loader\": \"^1.0.0\",\n    \"html-webpack-plugin\": \"^3.2.0\",\n    \"istanbul-instrumenter-loader\": \"^3.0.1\",\n    \"jasmine-core\": \"^3.2.1\",\n    \"karma\": \"^3.0.0\",\n    \"karma-coverage\": \"^1.1.2\",\n    \"karma-coverage-istanbul-reporter\": \"^2.0.4\",\n    \"karma-jasmine\": \"^1.1.2\",\n    \"karma-phantomjs-launcher\": \"^1.0.4\",\n    \"karma-sourcemap-loader\": \"^0.3.7\",\n    \"karma-spec-reporter\": \"^0.0.32\",\n    \"karma-webpack\": \"^3.0.4\",\n    \"node-sass\": \"^4.9.3\",\n    \"phantomjs-polyfill-object-assign\": \"0.0.2\",\n    \"sass-loader\": \"^7.1.0\",\n    \"style-loader\": \"^0.23.0\",\n    \"webpack\": \"^4.17.2\",\n    \"webpack-cli\": \"^3.1.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.5.0\"\n  }\n}\n",
+    "longname": "/home/dev/Dropbox/www/rsp-fe/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

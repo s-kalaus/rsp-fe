@@ -1,8 +1,17 @@
 import { Round } from './round';
 import { Main } from './main';
 
+/**
+ * Game
+ */
 export class Game {
 
+  /**
+   * Constructor
+   *
+   * @param {Object} main Main class reference
+   * @param {Object} data Game data
+   */
   constructor(main, data) {
 
     this.main = main;
@@ -25,6 +34,9 @@ export class Game {
     this.iComputerControlStop = this.main.dom.$('gameComputerControlStop');
   }
 
+  /**
+   * Init
+   */
   init() {
 
     this.createComputerControl();
@@ -32,9 +44,12 @@ export class Game {
     this.createRound();
   }
 
+  /**
+   * Creates computer control
+   */
   createComputerControl() {
 
-    this.iComputerControlStop.addEventListener('click', (event) => {
+    this.iComputerControlStop.addEventListener('click', () => {
 
       this.gameType = this.gameType = Main.gameTypePvc;
 
@@ -45,6 +60,9 @@ export class Game {
     }, true);
   }
 
+  /**
+   * Creates human control
+   */
   createHumanControl() {
 
     this.main.dom.html(this.iUsername, this.main.user.username);
@@ -60,7 +78,7 @@ export class Game {
       this.iHumanControl.appendChild(img);
     });
 
-    this.iHumanControlStop.addEventListener('click', (event) => {
+    this.iHumanControlStop.addEventListener('click', () => {
 
       this.gameType = this.gameType = Main.gameTypeCvc;
 
@@ -68,9 +86,12 @@ export class Game {
     }, true);
   }
 
+  /**
+   * Creates round
+   */
   createRound() {
 
-    this.round = new Round(this.main, this, this.rounds);
+    this.round = new Round(this.main, this);
 
     this.rounds.push(this.round);
 
@@ -79,6 +100,9 @@ export class Game {
     this.update();
   }
 
+  /**
+   * Updates game ui
+   */
   update() {
 
     this.main.dom.html(this.iRound, this.round.num);
@@ -106,6 +130,9 @@ export class Game {
     }
   }
 
+  /**
+   * Update rounds counter
+   */
   updateComputerRoundCounter() {
 
     const counter = Number(this.main.dom.html(this.iComputerControl)) - 1;
@@ -117,11 +144,17 @@ export class Game {
     }
   }
 
+  /**
+   * Start animation
+   */
   animationStart() {
 
     this.iElement.classList.add('animated');
   }
 
+  /**
+   * Stop animation
+   */
   animationStop() {
 
     this.iElement.classList.remove('animated');

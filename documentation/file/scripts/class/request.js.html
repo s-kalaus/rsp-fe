@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">scripts/class/request.js | rsp-fe</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="FE part of Rock Scissors Paper game"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="rsp-fe"><meta property="twitter:description" content="FE part of Rock Scissors Paper game"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#class">class</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/dom.js~Dom.html">Dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/main.js~Main.html">Main</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/round.js~Round.html">Round</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-game.js~StepGame.html">StepGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-onboarding.js~StepOnboarding.html">StepOnboarding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step.js~Step.html">Step</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/user.js~User.html">User</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">scripts/class/request.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Promise } from &apos;bluebird&apos;;
+
+export class Request {
+
+  /**
+   * Constructor
+   *
+   * @param {Object} main Main class reference
+   */
+  constructor(main) {
+
+    this.main = main;
+  }
+
+  /**
+   * GET request
+   *
+   * @param {Object} path URL path
+   */
+  get(path) {
+
+    return this.send(&apos;get&apos;, path);
+  }
+
+  /**
+   * POST request
+   *
+   * @param {Object} path URL path
+   * @param {Object} data Data to post
+   */
+  post(path, data) {
+
+    return this.send(&apos;post&apos;, path, data);
+  }
+
+  /**
+   * Handles XHR request response
+   *
+   * @param {Object} xhttp Request object
+   * @param {Function} resolve Resolve function
+   * @param {Function} reject Reject function
+   */
+  onReadyStateChange(xhttp, resolve, reject) {
+
+    if (xhttp.readyState !== 4) {
+      return;
+    }
+
+    if (xhttp.status !== 200) {
+      return reject(new Error(&apos;Response status incorrect&apos;));
+    }
+
+    try {
+
+      const response = JSON.parse(xhttp.responseText);
+
+      if (!response || !response.success) {
+        return reject(new Error(&apos;Response is not successfull&apos;));
+      }
+
+      resolve(response.data);
+    } catch (e) {
+
+      reject(new Error(&apos;Response parse error&apos;));
+    }
+  }
+
+  /**
+   * Send request
+   *
+   * @param {String} method Method to use
+   * @param {Object} path URL path
+   * @param {Object} data Data to post
+   */
+  send(method, path, data = {}) {
+
+    return new Promise((resolve, reject) =&gt; {
+
+      let body;
+      const xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = () =&gt;
+        this.onReadyStateChange(xhttp, resolve, reject);
+
+      xhttp.open(method.toUpperCase(), this.main.config.apiUrl + &apos;/&apos; + path, true);
+
+      if (this.main.user) {
+        xhttp.setRequestHeader(&apos;Authorization&apos;, this.main.user.sessionId);
+      }
+
+      if (method === &apos;post&apos;) {
+
+        xhttp.setRequestHeader(&apos;Content-Type&apos;, &apos;application/json&apos;);
+
+        body = JSON.stringify(data);
+      }
+
+      xhttp.send(body);
+    });
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

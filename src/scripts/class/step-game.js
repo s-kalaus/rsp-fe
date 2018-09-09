@@ -3,6 +3,11 @@ import { Game } from './game';
 
 export class StepGame extends Step {
 
+  /**
+   * Constructor
+   *
+   * @param {Object} main Main class reference
+   */
   constructor(main) {
 
     super(main);
@@ -12,6 +17,9 @@ export class StepGame extends Step {
     this.iElement = this.main.dom.$('game');
   }
 
+  /**
+   * Init class
+   */
   init() {
 
     this.main.request.post('game', {
@@ -22,6 +30,6 @@ export class StepGame extends Step {
       this.game = new Game(this.main, gameData);
 
       this.game.init();
-    }).catch((err) => this.main.error(err))
+    }).catch((err) => this.main.error(err));
   }
 }

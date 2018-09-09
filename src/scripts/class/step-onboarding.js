@@ -4,6 +4,11 @@ import { User } from './user';
 
 export class StepOnboarding extends Step {
 
+  /**
+   * Constructor
+   *
+   * @param {Object} main Main class reference
+   */
   constructor(main) {
 
     super(main);
@@ -16,6 +21,9 @@ export class StepOnboarding extends Step {
     this.iDescription = this.main.dom.$('onboardingDescription');
   }
 
+  /**
+   * Init class
+   */
   init() {
 
     this.initInfo();
@@ -23,12 +31,18 @@ export class StepOnboarding extends Step {
     this.initForm();
   }
 
+  /**
+   * Init info block
+   */
   initInfo() {
 
     this.main.dom.html(this.iName, this.main.config.name);
     this.main.dom.html(this.iDescription, this.main.config.description);
   }
 
+  /**
+   * Init promo block
+   */
   initPromo() {
 
     this.main.dom.html(this.iPromo, '');
@@ -43,6 +57,9 @@ export class StepOnboarding extends Step {
     });
   }
 
+  /**
+   * Init form
+   */
   initForm() {
 
     this.iForm.addEventListener('submit', (event) => {
@@ -53,6 +70,9 @@ export class StepOnboarding extends Step {
     }, true);
   }
 
+  /**
+   * Submit handler
+   */
   onSubsmit() {
 
     this.main.gameType = this.iForm.gameType.value;

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">scripts/class/main.spec.js | rsp-fe</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="FE part of Rock Scissors Paper game"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="rsp-fe"><meta property="twitter:description" content="FE part of Rock Scissors Paper game"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#class">class</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/dom.js~Dom.html">Dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/main.js~Main.html">Main</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/round.js~Round.html">Round</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-game.js~StepGame.html">StepGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step-onboarding.js~StepOnboarding.html">StepOnboarding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/step.js~Step.html">Step</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/scripts/class/user.js~User.html">User</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">scripts/class/main.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* global expect, ENV, Function, spyOn */
+
+import { Promise } from &apos;bluebird&apos;;
+
+import { Dom } from &apos;./dom&apos;;
+import { Main } from &apos;./main&apos;;
+import { StepOnboarding } from &apos;./step-onboarding&apos;;
+import { StepGame } from &apos;./step-game&apos;;
+import { Request } from &apos;./request&apos;;
+
+describe(&apos;Main&apos;, () =&gt; {
+  let inst;
+
+  beforeEach(() =&gt; {
+    inst = new Main();
+  });
+
+  it(&apos;should exist and have defaults&apos;, function() {
+    expect(inst).toEqual(jasmine.any(Object));
+    expect(inst.gameName).toBe(&apos;rsp&apos;);
+    expect(inst.config).toEqual(ENV);
+  });
+
+  describe(&apos;Function: init&apos;, () =&gt; {
+    it(&apos;should exist&apos;, function() {
+      expect(inst.init).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should set dom&apos;, function() {
+      inst.init();
+      expect(inst.dom).toEqual(new Dom());
+    });
+    it(&apos;should set steps&apos;, function() {
+      inst.init();
+      expect(inst.steps).toEqual({
+        onboarding: new StepOnboarding(inst),
+        game: new StepGame(inst)
+      });
+    });
+    it(&apos;should set request&apos;, function() {
+      inst.init();
+      expect(inst.request).toEqual(new Request(inst));
+    });
+  });
+
+  describe(&apos;Function: initGameSchema&apos;, () =&gt; {
+    beforeEach(() =&gt; {
+      inst.init();
+      spyOn(inst, &apos;setStep&apos;);
+    });
+    it(&apos;should exist&apos;, function() {
+      expect(inst.initGameSchema).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should call request.get&apos;, function() {
+      spyOn(inst.request, &apos;get&apos;).and.returnValue({then: () =&gt; ({})});
+      inst.initGameSchema();
+      expect(inst.request.get).toHaveBeenCalledWith(&apos;static/rsp&apos;);
+    });
+    it(&apos;should set config&apos;, function() {
+      spyOn(inst.request, &apos;get&apos;).and.returnValue({then: (callback) =&gt; callback({test: 1})});
+      inst.initGameSchema();
+      expect(inst.config).toEqual({apiUrl: &apos;api-url&apos;, test: 1});
+    });
+    it(&apos;should call setStep&apos;, function() {
+      spyOn(inst.request, &apos;get&apos;).and.returnValue({then: (callback) =&gt; callback({test: 1})});
+      inst.initGameSchema();
+      expect(inst.setStep).toHaveBeenCalledWith(&apos;onboarding&apos;);
+    });
+  });
+
+  describe(&apos;Function: setStep&apos;, () =&gt; {
+    beforeEach(() =&gt; {
+      inst.init();
+    });
+    it(&apos;should exist&apos;, function() {
+      expect(inst.setStep).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should call init onboarding&apos;, function() {
+      spyOn(inst.steps.onboarding, &apos;activate&apos;);
+      spyOn(inst.steps.game, &apos;deactivate&apos;);
+      inst.setStep(&apos;onboarding&apos;);
+      expect(inst.steps.onboarding.activate).toHaveBeenCalledWith();
+      expect(inst.steps.game.deactivate).toHaveBeenCalledWith();
+    });
+  });
+
+  describe(&apos;Function: error&apos;, () =&gt; {
+    it(&apos;should exist&apos;, function() {
+      expect(inst.error).toEqual(jasmine.any(Function));
+    });
+    it(&apos;should log to console&apos;, function() {
+      spyOn(console, &apos;error&apos;);
+      const err = new Error(&apos;test&apos;);
+      inst.error(err);
+      expect(console.error).toHaveBeenCalledWith(err);
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

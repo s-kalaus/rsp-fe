@@ -5,14 +5,23 @@ import { StepOnboarding } from './step-onboarding';
 import { StepGame } from './step-game';
 import { Dom } from './dom';
 
+/**
+ * Main
+ */
 export class Main {
 
+  /**
+   * Constructor
+   */
   constructor() {
 
     this.gameName = Main.gameName;
     this.config = ENV;
   }
 
+  /**
+   * Init class
+   */
   init() {
 
     this.dom = new Dom();
@@ -23,6 +32,12 @@ export class Main {
     };
 
     this.request = new Request(this);
+  }
+
+  /**
+   * Init Game Schema
+   */
+  initGameSchema() {
 
     this.request.get('static/' + this.gameName).then((config) => {
 
@@ -32,6 +47,11 @@ export class Main {
     });
   }
 
+  /**
+   * Set Step
+   *
+   * @param {String} stepName Name of step
+   */
   setStep(stepName) {
 
     this.step = this.steps[stepName];
@@ -42,8 +62,14 @@ export class Main {
     );
   }
 
+  /**
+   * Send error
+   *
+   * @param {Object} err Error object
+   */
   error(err) {
 
+    // eslint-disable-next-line no-console
     console.error(err);
   }
 }

@@ -4,5 +4,10 @@ import '../styles/main.scss';
 
 const rsp = new Main();
 
-window.addEventListener('load', () => rsp.init(), true);
+window.addEventListener('load', () => {
+
+  rsp.init();
+
+  rsp.initGameSchema();
+}, true);
 

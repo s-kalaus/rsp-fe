@@ -1,5 +1,11 @@
 export class User {
 
+  /**
+   * Constructor
+   *
+   * @param {Object} main Main class reference
+   * @param {Object} data User data
+   */
   constructor(main, data) {
 
     this.main = main;
